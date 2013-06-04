@@ -1,0 +1,84 @@
+<div class="grid_12">
+  <div class="feature_icon">
+    <%= image_tag ("pub_profile_bubble.svg") %>
+    <div class="pg_title" style="margin-top:10px">hey there</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="grid_4 profile_container">
+    <div class="profile_img">
+      <%= image_tag avatar_url(@user) %>
+    </div>
+    <h3>
+      User { <span class="username"><%= @user.username %></span> }
+    </h3>
+    <p>
+      <p class="form_title">Bio:</p>
+      <%= @user.bio %>
+    </p>
+    <p>
+      <% unless @user.twitter_link.nil? or @user.twitter_link.blank? %>
+        <%= link_to image_tag("twitter.svg"), "http://www.twitter.com/#{@user.twitter_link}", target: "_blank" %>
+      <% end %>
+      <% unless @user.github_link.nil? or @user.github_link.blank? %>
+        <%= link_to image_tag("github.svg"), "http://www.github.com/#{@user.github_link}", target: "_blank" %>
+      <% end %>
+      <% unless @user.dribbble_link.nil? or @user.dribbble_link.blank? %>
+        <%= link_to image_tag("dribbble.svg"), "http://www.dribbble.com/#{@user.dribbble_link}", target: "_blank" %>
+      <% end %>
+    </p>
+
+    <% if user_signed_in? && @user.username == current_user.username %>
+
+      <div id="edit_profile_btn"><%= link_to("Edit Profile", edit_user_registration_path) %></div>
+    <% end %>
+  </div>
+
+
+  <p class="form_title grid_8 right">Contributions:</p>
+  <% @contents.each do |content| %>
+  <div class="grid_4 user_cards right">
+    <div class="card">
+      <div class="iframe_wrapper">
+        <iframe src="<%= url_for :action => "html", :controller => "contents", :id => content.id %>">
+        </iframe>
+      </div>
+
+      <div class="card_description hidden">
+        <%= link_to content.title, content %>
+        <p><%= content.description %></p>
+        <p>Tags: <%= raw content.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></p>
+      </div>
+    </div>
+
+    <div class="card_header">
+      <span class="card_contributor"><a href="/users/<%= content.user.id %>"><%= content.user.username %></a></span>
+      <span class="card_icons">
+        <%= image_tag('eye_icon.svg')%> <%= content.views %>
+        <% if current_user %>
+          <% if Favorite.exists?(:content_id => content.id, :user_id => current_user.id) %>
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+          <% else %>
+            <a href="<%= url_for :action => "update_likes", :controller => "contents", :id => content.id %>">
+              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+            </a>
+          <% end %>
+        <% else %>
+          <a href="<%= url_for :action => "update_likes", :controller => "contents", :id => content.id %>">
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+          </a>
+        <% end %>
+      </span>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
+
+<!--
+Note that how the tiles look in this page (the profile page) should match exactly
+how it looks on the home page (to be done)
+-->
+
