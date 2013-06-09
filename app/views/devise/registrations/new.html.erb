@@ -7,13 +7,35 @@
     <p class="pg_title"> sign up </p>
     <div class="rule"></div>
 
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:multipart => true}) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="grid_3">
         <%= link_to image_tag(avatar_url(@user), :class => "profile_img"), "http://gravatar.com/emails/", :title => "Click to set your avatar at Gravatar.com", :target => '_blank' %>
       </div>
+      <p>
+        UPLOAD PICTURE HERE
+        <%= f.file_field :image %>
+      </p>
+      <p>
+        OR UPLOAD PICTURE FROM A URL HERE
+        <%= f.label :remote_image_url %><br />
+        <%= f.text_field :remote_image_url %>
+      </p>
       <div class="grid_5" style="margin-left:20px">
+        <p class="form_title">account info</p>
+        <div>
+          <!-- NEED TO VALIDATE FOR @mba2015.hbs.edu -->
+          <%= f.email_field :email, :class => "form_field", :placeholder => "email (@mba2015.hbs.edu email required)" %>
+        </div>
+        <div>
+          <%= f.password_field :password, :class => "form_field", :placeholder => "password" %>
+        </div>
+        <div>
+          <%= f.password_field :password_confirmation, :class => "form_field", :placeholder => "password one more time" %>
+        </div>
+      </div>
+      <div class="grid_8">
         <p class="form_title">tell us about yourself</p>
         <div>
           <%= f.text_field :first_name, :class => "form_field", :placeholder => "First name" %>
@@ -22,20 +44,37 @@
           <%= f.text_field :last_name, :class => "form_field", :placeholder => "Last name" %>
         </div>
         <div>
-          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Brief intro" %>
-        </div>
-        <p class="form_title">account info</p>
-        <div>
-          <%= f.text_field :username, :autofocus => true, :class => "form_field", :placeholder => "username" %>
+         <!--  HOW TO MAKE THIS A 140 CHARACTER LIMIT FIELD??  -->
+<!--          THE PLACEHOLDER TEXT NEEDS TO APPEAR TO THE SIDE ON MOUSEOVER SO THAT USER CAN REMEMBER WHAT THEY WERE WRITING. EITHER THAT OR JUST PUT LABELS ON THESE TEXT FIELDS -->
+          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "One liner bio (140 character limit)" %>
         </div>
         <div>
-          <%= f.email_field :email, :class => "form_field", :placeholder => "email" %>
+          <%= f.text_field :background, :class => "form_field", :placeholder => "More detailed and/or general background" %>
         </div>
         <div>
-          <%= f.password_field :password, :class => "form_field", :placeholder => "password" %>
+         <!--  NEED TO RECORD AS TAGS  -->
+          <%= f.text_area :skills, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Skills (seperate with commas)" %>
         </div>
         <div>
-          <%= f.password_field :password_confirmation, :class => "form_field", :placeholder => "password one more time" %>
+          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Summary of your working/professional experience" %>
+        </div>
+        <div>
+          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "What are your goals with respect to entrepreneurship during your time at HBS?" %>
+        </div>
+        <div>
+          <!-- NEED TO RECORD AS TAGS.  -->
+          <%= f.text_field :role_interest, :class => "form_field", :placeholder => "Interest (role) (seperate with commas)" %>
+        </div>
+        <div>
+          <!-- NEED TO RECORD AS TAGS.  -->
+          <%= f.text_field :industry_interest, :class => "form_field", :placeholder => "Interest (industry) (seperate with commas)" %>
+        </div>
+        <div>
+          <!-- NEED TO RECORD AS TAGS.  -->
+          <%= f.text_field :countries, :class => "form_field", :placeholder => "Country of origin & experience (seperate with commas)" %>
+        </div>
+        <div>
+          <%= f.text_field :undergrad, :class => "form_field", :placeholder => "Undergraduate college" %>
         </div>
         <div class="submit_btn">
           <%= f.submit "sign up" %>
@@ -43,3 +82,19 @@
       </div>
     <% end %>
 </div>
+
+<!--
+Stuff that was on the excel spreadsheet
+[X] Name
+[X] Countrie(s)
+[X] Undergrad
+[X] Interest (role)
+[X] Interest (industry)
+[ ] Have startup?
+[ ] Have idea?
+[ ] StatusTell us about your main current business idea
+[ ] Next steps. Are you looking for others to join your business/work on your idea? If so, what are you looking for?
+[X] Experience. What type of skills and experience do you have?
+[X] Goals. What are you looking to achieve over the summer and the next two years?
+[X] e-mail address
+ -->

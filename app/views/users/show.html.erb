@@ -8,10 +8,10 @@
 
   <div class="grid_4 profile_container">
     <div class="profile_img">
-      <%= image_tag avatar_url(@user) %>
+      <%= image_tag @user.image_url(:thumb).to_s %>
     </div>
     <h3>
-      User { <span class="username"><%= @user.username %></span> }
+      { <span class="username"><%= @user.first_name %> <%= @user.last_name %></span> }
     </h3>
     <p>
       <p class="form_title">Bio:</p>
@@ -28,10 +28,35 @@
         <%= link_to image_tag("dribbble.svg"), "http://www.dribbble.com/#{@user.dribbble_link}", target: "_blank" %>
       <% end %>
     </p>
+    <p>
+      <p class="form_title">Countries:</p>
+      <%= @user.countries %>
+    </p>
+    <p>
+      <p class="form_title">Undergrad:</p>
+      <%= @user.undergrad %>
+    </p>
+    <p>
+      <p class="form_title">Role Interest:</p>
+      <%= @user.role_interest %>
+    </p>
+    <p>
+      <p class="form_title">Industry Interest:</p>
+      <%= @user.industry_interest %>
+    </p>
+    <p>
+      <p class="form_title">Skills:</p>
+      <%= @user.skills %>
+    </p>
+    <p>
+      <p class="form_title">Goals with respect to entrepreneurship while at HBS:</p>
+      <%= @user.entrepreneurship_goals %>
+    </p>
 
     <% if user_signed_in? && @user.username == current_user.username %>
-
-      <div id="edit_profile_btn"><%= link_to("Edit Profile", edit_user_registration_path) %></div>
+       <%= link_to(edit_user_registration_path) do %>
+        <div id="edit_profile_btn">Edit Profile</div>
+       <% end %>
     <% end %>
   </div>
 

@@ -12,3 +12,250 @@
 [06/03/13 19:27:19 -0700 Eu-wens-MacBook-Pro.local (13767)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [06/03/13 19:27:19 -0700 Eu-wens-MacBook-Pro.local (13767)] INFO : Installing Rails3 Error instrumentation
 [06/03/13 19:27:19 -0700 Eu-wens-MacBook-Pro.local (13767)] INFO : Finished instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Environment: development
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Dispatcher: webrick
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Application: My Application
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] WARN : Agent configured not to send data in this environment.
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Installing Net instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 11:07:45 -0700 Eu-wens-MacBook-Pro.local (30911)] INFO : Finished instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Environment: development
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : No known dispatcher detected.
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Application: My Application
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] WARN : Agent configured not to send data in this environment.
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Installing Net instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 11:43:05 -0700 Eu-wens-MacBook-Pro.local (31088)] INFO : Finished instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Environment: development
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Dispatcher: webrick
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Application: My Application
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] WARN : Agent configured not to send data in this environment.
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Installing Net instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 11:47:32 -0700 Eu-wens-MacBook-Pro.local (31122)] INFO : Finished instrumentation
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Environment: development
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Dispatcher: webrick
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Application: My Application
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] WARN : Agent configured not to send data in this environment.
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Installing Net instrumentation
+[06/08/13 11:56:40 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 11:56:41 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 11:56:41 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 11:56:41 -0700 Eu-wens-MacBook-Pro.local (31161)] INFO : Finished instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Environment: development
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : No known dispatcher detected.
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Application: My Application
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] WARN : Agent configured not to send data in this environment.
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Installing Net instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 12:05:30 -0700 Eu-wens-MacBook-Pro.local (31186)] INFO : Finished instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Environment: development
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Dispatcher: webrick
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Application: My Application
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] WARN : Agent configured not to send data in this environment.
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Installing Net instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 12:06:44 -0700 Eu-wens-MacBook-Pro.local (31192)] INFO : Finished instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Environment: development
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : No known dispatcher detected.
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Application: My Application
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] WARN : Agent configured not to send data in this environment.
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Installing Net instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 13:33:37 -0700 Eu-wens-MacBook-Pro.local (31414)] INFO : Finished instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Environment: development
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : No known dispatcher detected.
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Application: My Application
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] WARN : Agent configured not to send data in this environment.
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Installing Net instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 13:33:59 -0700 Eu-wens-MacBook-Pro.local (31421)] INFO : Finished instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Environment: development
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Dispatcher: webrick
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Application: My Application
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] WARN : Agent configured not to send data in this environment.
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Installing Net instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 13:37:35 -0700 Eu-wens-MacBook-Pro.local (31450)] INFO : Finished instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Environment: development
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : No known dispatcher detected.
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Application: My Application
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] WARN : Agent configured not to send data in this environment.
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Installing Net instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 17:31:25 -0700 Eu-wens-MacBook-Pro.local (32338)] INFO : Finished instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Environment: development
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : No known dispatcher detected.
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Application: My Application
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] WARN : Agent configured not to send data in this environment.
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Installing Net instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 17:43:36 -0700 Eu-wens-MacBook-Pro.local (32411)] INFO : Finished instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Environment: development
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : No known dispatcher detected.
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Application: My Application
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] WARN : Agent configured not to send data in this environment.
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Installing Net instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 17:50:32 -0700 Eu-wens-MacBook-Pro.local (32429)] INFO : Finished instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Environment: development
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : No known dispatcher detected.
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Application: My Application
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] WARN : Agent configured not to send data in this environment.
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Installing Net instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 17:52:56 -0700 Eu-wens-MacBook-Pro.local (32441)] INFO : Finished instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Environment: development
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : No known dispatcher detected.
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Application: My Application
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] WARN : Agent configured not to send data in this environment.
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Installing Net instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 17:55:11 -0700 Eu-wens-MacBook-Pro.local (32458)] INFO : Finished instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Environment: development
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Dispatcher: webrick
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Application: My Application
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] WARN : Agent configured not to send data in this environment.
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Installing Net instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 18:15:40 -0700 Eu-wens-MacBook-Pro.local (32529)] INFO : Finished instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Environment: development
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : No known dispatcher detected.
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Application: My Application
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] WARN : Agent configured not to send data in this environment.
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Installing Net instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 19:13:49 -0700 Eu-wens-MacBook-Pro.local (32653)] INFO : Finished instrumentation
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Environment: development
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : No known dispatcher detected.
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Application: My Application
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] WARN : Agent configured not to send data in this environment.
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Installing Net instrumentation
+[06/08/13 19:15:22 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 19:15:23 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 19:15:23 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 19:15:23 -0700 Eu-wens-MacBook-Pro.local (32656)] INFO : Finished instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Environment: development
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Dispatcher: webrick
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Application: My Application
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] WARN : Agent configured not to send data in this environment.
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Installing Net instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 19:22:02 -0700 Eu-wens-MacBook-Pro.local (32674)] INFO : Finished instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Starting the New Relic agent in "development" environment.
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Reading configuration from config/newrelic.yml
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Environment: development
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Dispatcher: webrick
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Application: My Application
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] WARN : Agent configured not to send data in this environment.
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Installing ActiveRecord instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Installing Net instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Installing Rails 3 Controller instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Installing Rails3 Error instrumentation
+[06/08/13 19:37:02 -0700 Eu-wens-MacBook-Pro.local (33589)] INFO : Finished instrumentation

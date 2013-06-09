@@ -10,6 +10,8 @@ class PagesController < ApplicationController
       @contents = Content.order('favorites').limit(24).reverse_order
     end
 
+    @users = User.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @contents }

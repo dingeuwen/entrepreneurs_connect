@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130512070406) do
+ActiveRecord::Schema.define(:version => 20130609021523) do
 
   create_table "comments", :force => true do |t|
     t.integer  "content_id"
@@ -99,6 +99,16 @@ ActiveRecord::Schema.define(:version => 20130512070406) do
     t.string   "github_link"
     t.string   "dribbble_link"
     t.boolean  "admin"
+    t.string   "countries"
+    t.string   "undergrad"
+    t.string   "role_interest"
+    t.string   "industry_interest"
+    t.string   "skills"
+    t.text     "entrepreneurship_goals"
+    t.integer  "views",                  :default => 0
+    t.text     "background"
+    t.text     "employment_history"
+    t.string   "image"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
