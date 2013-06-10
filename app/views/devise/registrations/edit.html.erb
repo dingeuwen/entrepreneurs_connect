@@ -12,6 +12,14 @@
       <div class="grid_3">
         <%= image_tag @user.image_url(:thumb).to_s %>
       </div>
+      <p>
+        Choose image to upload
+        <%= f.file_field :image %>
+      </p>
+      <p>
+        Or use an image online. Put url below.
+        <%= f.text_field :remote_image_url %>
+      </p>
       <div class="grid_5" style="margin-left:20px">
         <div>
           <%= f.label :first_name %><br />

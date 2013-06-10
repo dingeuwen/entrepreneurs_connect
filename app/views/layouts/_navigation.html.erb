@@ -5,7 +5,7 @@
       <span id="sub_logo">Harvard Business School</span></a>
         <div id="nav_links">
           <ul>
-            <li><%= link_to("about us", aboutus_path) %></li>
+            <li><%= link_to("about", aboutus_path) %></li>
           <% if user_signed_in? %>
             <li><%= link_to("sign out", destroy_user_session_path, :method => "delete") %></li>
             <li><a href="/users/<%= current_user.id %>">{ <%= current_user.first_name %> <%= current_user.last_name %> }</a>
@@ -26,8 +26,7 @@
 
     <div id="upload_btn">
       <% if user_signed_in? %>
-        <%= image_tag('upload_cloud.svg') %>
-        <%= link_to 'Add an Idea', new_idea_path %>
+        <%= link_to 'View Startup Ideas', new_idea_path %>
       <% else %>
         <%= image_tag('upload_cloud.svg') %>
         <%= link_to 'Add an Idea', new_user_session_path %>

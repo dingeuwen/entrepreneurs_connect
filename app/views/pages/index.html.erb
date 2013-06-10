@@ -15,7 +15,7 @@
       <div class="iframe_wrapper">
         <%= image_tag user.image_url(:thumb).to_s %>
       </div>
-      <div>
+      <div class="user_bio">
         <%= user.bio %>
       </div>
       <div class="card_description hidden">
@@ -25,7 +25,6 @@
         <p><%= user.background %></p>
         <p>Skills:</p>
         <p><%= user.skill_list %></p>
-
       </div>
     </div>
 

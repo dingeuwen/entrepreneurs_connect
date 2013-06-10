@@ -12,6 +12,8 @@ class PagesController < ApplicationController
 
     @users = User.all
 
+    @founder = User.where(:id => 15)
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @contents }

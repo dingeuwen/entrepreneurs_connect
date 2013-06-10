@@ -21,24 +21,16 @@ class User < ActiveRecord::Base
   acts_as_taggable_on :skills, :countries, :undergrad, :role_interest, :industry_interest
   validates_uniqueness_of :email
 
-  # this is what i found online to validate custom email. but i dont get it!
-  # class EmailValidator < ActiveModel::EachValidator
-  #   def validate_each(record, attribute, value)
-  #     unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-  #       record.errors[attribute] << (options[:message] || "is not an email")
-  #     end
-  #   end
-  # end
-  # class Person < ActiveRecord::Base
-  #   validates :email, :presence => true, :email => true
-  # end
+  validate :image_or_remote_image_url_present
+  validates :email, :format => {:with => /\A([^@\s]+)(@mba2015.hbs.edu|@mba2014.hbs.edu)\z/i, :message => "@mba2015.hbs.edu or @mba2014.hbs.edu e-mail required to sign up. If you are a member of a different year, school, or community and you would like to join, e-mail me at eding@mba2015.hbs.edu indicating your interest. If I get enough requests from other members of your school/group/community, I will create a new site for you."}
 
-  # the inclusion validation below isn't what I want. think I need a regex. haven't been able to figure it out though!
-  # validates :email, :inclusion => { :in => %w(@mba2015.hbs.edu),
-  #   :message => "@mba2015.hbs.edu e-mail required to sign up. If you are a member of a different year, school, or community and you would like to join, e-mail dingeuwen@gmail.com indicating your interest. If I get > 100 requests from other members of your school/group/community, I will create a new site for you."}
+  def image_or_remote_image_url_present
+    errors.add(:image, "can't be blank") unless image.present? || remote_image_url.present?
+  end
+
   validates_presence_of :password, :password_confirmation, :first_name, :last_name, :skill_list,
                         :country_list, :undergrad_list, :role_interest_list, :industry_interest_list
-  validates :bio, :length => { :maximum => 140 }
+  validates :bio, :length => { :maximum => 160 }
 
   has_many :ideas
   has_many :to_watch_list
