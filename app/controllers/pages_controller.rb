@@ -4,10 +4,10 @@ class PagesController < ApplicationController
   # GET /contents.json
   def index
     if params[:tag]
-      @contents = Content.tagged_with(params[:tag]).order('favorites').reverse
+      @ideas = Idea.tagged_with(params[:tag]).order('favorites').reverse
     else
       # @contents = Content.all
-      @contents = Content.order('favorites').limit(24).reverse_order
+      @ideas = Idea.order('favorites').limit(24).reverse_order
     end
 
     @users = User.all

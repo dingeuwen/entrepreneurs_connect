@@ -30,23 +30,23 @@
     </p>
     <p>
       <p class="form_title">Countries:</p>
-      <%= @user.countries %>
+      <%= raw @user.country_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Undergrad:</p>
-      <%= @user.undergrad %>
+      <%= raw @user.undergrad_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Role Interest:</p>
-      <%= @user.role_interest %>
+      <%= raw @user.role_interest_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Industry Interest:</p>
-      <%= @user.industry_interest %>
+      <%= raw @user.industry_interest_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Skills:</p>
-      <%= @user.skills %>
+      <%= raw @user.skill_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Goals with respect to entrepreneurship while at HBS:</p>
@@ -61,37 +61,32 @@
   </div>
 
 
-  <p class="form_title grid_8 right">Contributions:</p>
-  <% @contents.each do |content| %>
+  <p class="form_title grid_8 right">Startup/Product/Business Ideas:</p>
+  <% @ideas.each do |idea| %>
   <div class="grid_4 user_cards right">
     <div class="card">
-      <div class="iframe_wrapper">
-        <iframe src="<%= url_for :action => "html", :controller => "contents", :id => content.id %>">
-        </iframe>
-      </div>
 
       <div class="card_description hidden">
-        <%= link_to content.title, content %>
-        <p><%= content.description %></p>
-        <p>Tags: <%= raw content.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></p>
+        <%= link_to idea.title, idea %>
+        <p><%= idea.summary %></p>
       </div>
     </div>
 
     <div class="card_header">
-      <span class="card_contributor"><a href="/users/<%= content.user.id %>"><%= content.user.username %></a></span>
+      <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %><%= idea.user.last_name %></a></span>
       <span class="card_icons">
-        <%= image_tag('eye_icon.svg')%> <%= content.views %>
+        <%= image_tag('eye_icon.svg')%> <%= idea.views %>
         <% if current_user %>
-          <% if Favorite.exists?(:content_id => content.id, :user_id => current_user.id) %>
-            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+          <% if Favorite.exists?(:idea_id => idea.id, :user_id => current_user.id) %>
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
           <% else %>
-            <a href="<%= url_for :action => "update_likes", :controller => "contents", :id => content.id %>">
-              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+            <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
+              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
             </a>
           <% end %>
         <% else %>
-          <a href="<%= url_for :action => "update_likes", :controller => "contents", :id => content.id %>">
-            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:content_id => content.id).size %>
+          <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
           </a>
         <% end %>
       </span>

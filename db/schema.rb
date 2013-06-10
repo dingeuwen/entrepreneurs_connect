@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130609021523) do
+ActiveRecord::Schema.define(:version => 20130609232442) do
 
   create_table "comments", :force => true do |t|
     t.integer  "content_id"
@@ -19,22 +19,6 @@ ActiveRecord::Schema.define(:version => 20130609021523) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "contents", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.text     "html"
-    t.text     "css"
-    t.boolean  "deleted"
-    t.boolean  "visible"
-    t.date     "created_on"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "likes"
-    t.integer  "views"
-    t.integer  "favorites"
-    t.integer  "user_id"
   end
 
   create_table "favorites", :force => true do |t|
@@ -45,6 +29,35 @@ ActiveRecord::Schema.define(:version => 20130609021523) do
     t.boolean  "shared_on_twitter"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "idea_invitations", :force => true do |t|
+    t.integer  "ideas_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "idea_pictures", :force => true do |t|
+    t.integer  "ideas_id"
+    t.string   "image"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ideas", :force => true do |t|
+    t.string   "title"
+    t.date     "created_on"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "views"
+    t.integer  "user_id"
+    t.string   "summary"
+    t.text     "vision"
+    t.text     "problem_statement"
+    t.text     "details"
+    t.text     "what_i_need"
+    t.boolean  "private"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -75,6 +88,13 @@ ActiveRecord::Schema.define(:version => 20130609021523) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "to_watch_lists", :force => true do |t|
+    t.integer  "user1_id"
+    t.integer  "user2_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,50 @@
+<% if (@ideas == []) || (@idea == "") %>
+  <div class="feature_icon">
+  <%= image_tag "search_results_magnifying_glass.svg" %>
+  </div>
+  <p class="pg_title"> no results </p>
+<% else %>
+<div class="feature_icon">
+  <%= image_tag "search_results_magnifying_glass.svg" %>
+</div>
+<p class="pg_title"> search results </p>
+
+<div id="idea_container">
+  <% @ideas.each do |idea| %>
+  <div class="grid_4 card_container">
+    <div class="card">
+      <div class="iframe_wrapper">
+        <iframe src="<%= url_for :action => "html", :controller => "ideas", :id => idea.id %>">
+        </iframe>
+      </div>
+        <div class="card_description hidden">
+          <a class="card_link" href="<%= url_for :action => "update_views", :controller => "ideas", :id => idea.id %>"></a>
+          <span class="card_title"><%= link_to idea.title, idea %></span>
+          <p><%= idea.description %></p>
+          <span class="card_tags">Tags: <%= raw idea.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></span>
+        </div>
+    </div>
+
+    <div class="card_header">
+      <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.username %></a></span>
+      <span class="card_icons">
+        <%= image_tag('eye_icon.svg')%> <%= idea.views %>
+        <% if current_user %>
+          <% if Favorite.exists?(:idea_id => idea.id, :user_id => current_user.id) %>
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
+          <% else %>
+            <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
+              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
+            </a>
+          <% end %>
+        <% else %>
+          <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
+            <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
+          </a>
+        <% end %>
+      </span>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

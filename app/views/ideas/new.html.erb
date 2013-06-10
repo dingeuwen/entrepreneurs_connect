@@ -1,0 +1,46 @@
+<div class="grid_10 push_1">
+  <div class="feature_icon">
+    <%= image_tag ("upload_lamp.svg") %>
+  </div>
+  <p class="pg_title"> showcase </p>
+  <div class="rule"></div>
+
+  <%= form_for(@idea) do |f| %>
+    <% if @idea.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+        <ul>
+        <% @idea.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="grid_10">
+      <p>Have an idea? Tell us about it! Telling us about your idea allows you to get feedback from the community, and increases the chances that the co-founder you've been looking for finds YOU. </p>
+      <p>Ideas are only visible to signed-in members of the HBS community (people with a @mba2015.hbs.edu email address). Members of the public can view user profiles, but not ideas. </p>
+      <p>You also have the option to mark your ideas as private, in which case only you and any specific users you invite to collaborate with will be able to view your ideas.</p>
+    </div>
+    <div class="grid_10">
+      <%= f.label "Title" %><br />
+      <%= f.text_field :title, :class => "form_field", :placeholder => "Enter title of your startup/product/business idea" %>
+      <%= f.label "Summary of the idea (140 character limit)" %><br />
+      <%= f.text_area :summary, :class => "desc_field" %>
+      <%= f.label "The vision" %><br />
+      <%= f.text_area :vision, :class => "desc_field", :placeholder => "What the big, hairy, audacious goal?" %>
+      <%= f.label "Problem statement" %><br />
+      <%= f.text_area :problem_statement, :class => "desc_field", :placeholder => "Whats the problem you are trying to solve? How are you adding value?" %>
+      <%= f.label "Other details" %><br />
+      <%= f.text_area :details, :class => "desc_field", :placeholder => "Anything else?" %>
+      <%= f.label "What I need/am looking for" %><br />
+      <%= f.text_area :what_i_need, :class => "desc_field", :placeholder => "How can members of this community help?" %>
+      <p> missing checkbox to indicate private idea </p>
+
+    </div>
+
+    <div class="submit_btn grid_3 push_7 actions">
+      <%= f.submit "save and add" %>
+    </div>
+  <% end %>
+
+</div>

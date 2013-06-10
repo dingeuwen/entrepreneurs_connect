@@ -45,7 +45,15 @@ $logo_font: Trocchi, serif;
   font-size: 40px;
   font-family: $logo_font;
   position: relative;
-  top: 25px;
+  top: 15px;
+}
+
+#sub_logo{
+  color: white;
+  font-family: $logo_font;
+  position: relative;
+  top: 50px;
+  left: -310px;
 }
 
 #upload_btn {

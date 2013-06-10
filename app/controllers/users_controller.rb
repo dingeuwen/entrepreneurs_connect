@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @contents = @user.contents
+    @ideas = @user.ideas
 
     respond_to do |format|
       format.html # show.html.erb
@@ -17,11 +17,13 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:content])
-        format.html { redirect_to @user }
+        # format.html { redirect_to @user }
+        format.html { redirect_to :action => "show", :id => @user.id }
         format.json { head :no_content }
       else
-        format.html { redirect_to @user }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
+        # format.html { redirect_to @user }
+        format.html { redirect_to :action => "show", :id => @user.id }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end

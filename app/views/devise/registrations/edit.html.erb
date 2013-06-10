@@ -49,7 +49,7 @@
         </div>
         <div>
           <%= f.label :skills %><br />
-          <%= f.text_area :skills, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
         <div>
           <%= f.label :employment_history %><br />
@@ -61,19 +61,19 @@
         </div>
         <div>
           <%= f.label :role_interest %><br />
-          <%= f.text_area :role_interest, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :role_interest_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
         <div>
           <%= f.label :industry_interest %><br />
-          <%= f.text_area :industry_interest, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :industry_interest_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
         <div>
           <%= f.label :countries %><br />
-          <%= f.text_area :countries, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :country_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
         <div>
           <%= f.label :undergrad %><br />
-          <%= f.text_area :undergrad, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :undergrad_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

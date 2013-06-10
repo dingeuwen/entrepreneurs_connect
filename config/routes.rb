@@ -5,28 +5,28 @@ Cssdash::Application.routes.draw do
 
   # resources :comments
   # resources :favorites
-  resources :contents do
+  resources :ideas do
     resources :comments
   end
   devise_for :users
 
   root :to => 'pages#index'
-  # Create new content
-  get '/contents/new', :to => 'contents#new', :as => 'new_content'
-  post '/contents', :to => 'contents#create'
-  # Edit content
-  get '/contents/:id/edit',  :to => 'contents#edit', :as => 'edit_content'
-  # Show content
-  get '/contents/:id', :to => 'contents#show', :as => 'content'
-  # Show HTML content
-  get '/contents/:id/html', :to => 'contents#html'
-  # Show CSS content
-  get '/contents/:id/css', :to => 'contents#css'
-  # Update content
-  put '/contents/:id', :to => 'contents#update'
+  # Create new idea
+  get '/ideas/new', :to => 'ideas#new', :as => 'new_idea'
+  post '/ideas', :to => 'ideas#create'
+  # Edit idea
+  get '/ideas/:id/edit',  :to => 'ideas#edit', :as => 'edit_idea'
+  # Show idea
+  get '/ideas/:id', :to => 'ideas#show', :as => 'idea'
+  # Show HTML idea
+  get '/ideas/:id/html', :to => 'ideas#html'
+  # Show CSS idea
+  get '/ideas/:id/css', :to => 'ideas#css'
+  # Update idea
+  put '/ideas/:id', :to => 'ideas#update'
   # Contributor profile
-  get '/contents/:id/update_views', :to => 'contents#update_views', :as => 'update_views'
-  get '/contents/:id/update_likes', :to => 'contents#update_likes', :as => 'update_likes'
+  get '/ideas/:id/update_views', :to => 'ideas#update_views', :as => 'update_views'
+  get '/ideas/:id/update_likes', :to => 'ideas#update_likes', :as => 'update_likes'
   get '/users/:id/update_views', :to => 'users#update_views', :as => 'update_user_views'
 
   get '/users/:id', :to => 'users#show', :as => 'user_show'
@@ -35,7 +35,7 @@ Cssdash::Application.routes.draw do
   # Tags
   get '/tags/:tag', :to => 'pages#index', :as => :tag
   # Search
-  get '/search', :to => 'contents#search'
+  get '/search', :to => 'ideas#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

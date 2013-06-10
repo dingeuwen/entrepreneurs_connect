@@ -52,8 +52,7 @@
           <%= f.text_field :background, :class => "form_field", :placeholder => "More detailed and/or general background" %>
         </div>
         <div>
-         <!--  NEED TO RECORD AS TAGS  -->
-          <%= f.text_area :skills, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Skills (seperate with commas)" %>
+          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Skills (seperate with commas)" %>
         </div>
         <div>
           <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Summary of your working/professional experience" %>
@@ -62,19 +61,16 @@
           <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "What are your goals with respect to entrepreneurship during your time at HBS?" %>
         </div>
         <div>
-          <!-- NEED TO RECORD AS TAGS.  -->
-          <%= f.text_field :role_interest, :class => "form_field", :placeholder => "Interest (role) (seperate with commas)" %>
+          <%= f.text_field :role_interest_list, :class => "form_field", :placeholder => "Interest (role) (seperate with commas)" %>
         </div>
         <div>
-          <!-- NEED TO RECORD AS TAGS.  -->
-          <%= f.text_field :industry_interest, :class => "form_field", :placeholder => "Interest (industry) (seperate with commas)" %>
+          <%= f.text_field :industry_interest_list, :class => "form_field", :placeholder => "Interest (industry) (seperate with commas)" %>
         </div>
         <div>
-          <!-- NEED TO RECORD AS TAGS.  -->
-          <%= f.text_field :countries, :class => "form_field", :placeholder => "Country of origin & experience (seperate with commas)" %>
+          <%= f.text_field :country_list, :class => "form_field", :placeholder => "Country of origin & experience (seperate with commas)" %>
         </div>
         <div>
-          <%= f.text_field :undergrad, :class => "form_field", :placeholder => "Undergraduate college" %>
+          <%= f.text_field :undergrad_list, :class => "form_field", :placeholder => "Undergraduate college" %>
         </div>
         <div class="submit_btn">
           <%= f.submit "sign up" %>

@@ -1,0 +1,89 @@
+<div class="grid_10 push_1">
+  <div class="feature_icon">
+    <%= image_tag ("detail_binoculars.svg") %>
+  </div>
+  <p class="pg_title"> detail </p>
+  <div class="rule"></div>
+
+  <p id="notice"><%= notice %></p>
+
+  <%= form_for(@idea) do |f| %>
+    <% if @idea.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+
+        <ul>
+        <% @idea.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div>
+    <div class="grid_5">
+      <div class="grid_5">
+        <p class="form_title title_rule">Title</p>
+        <%= @idea.title %> by
+        <span class="username">
+          <a href="/users/<%= @idea.user.id %>">
+            <%= @idea.user.username %>
+          </a>
+        </span>
+          on <%= @idea.created_on.strftime("%b %e, %Y") %>
+      </div>
+
+      <div class="grid_5" style="margin-bottom: 15px">
+        <p class="form_title title_rule">Tags</p>
+        <span class="username"><%= raw @idea.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></span>
+      </div>¯
+    </div>
+    <div class="grid_5" style="margin-left: 20px; height:95px">
+      <p class="form_title title_rule">Description</p>
+        <div class="idea_description"><%= @idea.description %></div>
+      <br>
+    </div>
+
+    <div class="grid_10" style="margin-top:5px">
+      <div class="grid_5">
+        <p class="form_title">HTML</p>
+        <%= f.text_area :html, :id => "htmloutput", :class => "code_field" %>
+      </div>
+      <div class="grid_5" style="margin-left:20px">
+        <p class="form_title">CSS</p>
+        <%= f.text_area :css, :id => "cssoutput", :class => "code_field" %>
+      </div>
+    </div>
+  <% end %>
+
+  <div id="iframe-wrapper" class="grid_10">
+    <iframe id="iframe" class="big_renderer"></iframe>
+    <% if user_signed_in? && @idea.user_id == current_user.id %>
+       <div id="edit_profile_btn"><%= link_to 'Edit', edit_idea_path(@idea) %></div>
+    <% end %>
+  </div>
+
+  <div class="comments_container">
+    <div class="rule"></div>
+    <p class="form_title">Comments: </p>
+    <div class="grid_5">
+    <% @idea.comments.each do |idea| %>
+    <div class="comments">
+      <a href="/users/<%= idea.user.id %>">
+        <%= idea.user.username %>
+      </a> <%= (idea.created_at).strftime("%b %e, %Y") %>
+      <p><%= idea.body %></p>
+    </div>
+    <% end %>
+    </div>
+
+    <div class="comment_form grid_5">
+    <%= form_for([@idea, @idea.comments.build]) do |f| %>
+      <div class="field">
+        <%= f.text_area :body %>
+      </div>
+      <div class="actions comment_btn">
+        <%= f.submit %>
+      </div>
+    <% end %>
+    </div>
+  </div>
