@@ -11,17 +11,18 @@
       <%= devise_error_messages! %>
 
       <div class="grid_3">
-        <%= link_to image_tag(avatar_url(@user), :class => "profile_img"), "http://gravatar.com/emails/", :title => "Click to set your avatar at Gravatar.com", :target => '_blank' %>
+        <div class="profile_img" style="display:block; background-color: white;">
+        </div>
+        <p>
+          Choose image to upload
+          <%= f.file_field :image %>
+        </p>
+        <p>
+          Or use an image online. Put url below.
+          <%= f.text_field :remote_image_url %>
+        </p>
       </div>
-      <p>
-        UPLOAD PICTURE HERE
-        <%= f.file_field :image %>
-      </p>
-      <p>
-        OR UPLOAD PICTURE FROM A URL HERE
-        <%= f.label :remote_image_url %><br />
-        <%= f.text_field :remote_image_url %>
-      </p>
+
       <div class="grid_5" style="margin-left:20px">
         <p class="form_title">account info</p>
         <div>
@@ -32,45 +33,55 @@
           <%= f.password_field :password, :class => "form_field", :placeholder => "password" %>
         </div>
         <div>
-          <%= f.password_field :password_confirmation, :class => "form_field", :placeholder => "password one more time" %>
+          <%= f.password_field :password_confirmation, :class => "form_field", :placeholder => "confirm password" %>
+        </div>
+        <div>
+          <%= f.label "First Name" %><br />
+          <%= f.text_field :first_name, :class => "form_field" %>
+        </div>
+        <div>
+          <%= f.label "Last Name" %><br />
+          <%= f.text_field :last_name, :class => "form_field" %>
         </div>
       </div>
       <div class="grid_8">
         <p class="form_title">tell us about yourself</p>
         <div>
-          <%= f.text_field :first_name, :class => "form_field", :placeholder => "First name" %>
+          <!-- TEXT NEEDS TO APPEAR TO THE SIDE ON MOUSEOVER SO THAT USER CAN REMEMBER WHAT THEY WERE WRITING. EITHER THAT OR JUST PUT LABELS ON THESE TEXT FIELDS -->
+          <%= f.label "One-liner bio (140 character limit)" %><br />
+          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page.)" %>
         </div>
         <div>
-          <%= f.text_field :last_name, :class => "form_field", :placeholder => "Last name" %>
+          <%= f.label "Background" %><br />
+          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
         </div>
         <div>
-         <!--  HOW TO MAKE THIS A 140 CHARACTER LIMIT FIELD??  -->
-<!--          THE PLACEHOLDER TEXT NEEDS TO APPEAR TO THE SIDE ON MOUSEOVER SO THAT USER CAN REMEMBER WHAT THEY WERE WRITING. EITHER THAT OR JUST PUT LABELS ON THESE TEXT FIELDS -->
-          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "One liner bio (140 character limit)" %>
+          <%= f.label "Skills (seperate each with comma)" %><br />
+          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "bio_field" %>
         </div>
         <div>
-          <%= f.text_field :background, :class => "form_field", :placeholder => "More detailed and/or general background" %>
+          <%= f.label "Employment History" %><br />
+          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Short summary of your building/hacking/working/professional experience" %>
         </div>
         <div>
-          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Skills (seperate with commas)" %>
+          <%= f.label "Entrepreneurship Goals" %><br />
+          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "What do you hope to achieve with respect to entrepreneurship during your time at HBS?" %>
         </div>
         <div>
-          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Summary of your working/professional experience" %>
+          <span>Interest: Role (eg. Marketing, product, design, biz dev, just exploring)</span>
+          <%= f.text_field :role_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "What are your goals with respect to entrepreneurship during your time at HBS?" %>
+          <span>Interest: Industry (eg. Education, med device, consumer products, web, mobile, etc)</span>
+          <%= f.text_field :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.text_field :role_interest_list, :class => "form_field", :placeholder => "Interest (role) (seperate with commas)" %>
+          <%= f.label "Country of origin, experience, and/or interest" %><br />
+          <%= f.text_field :country_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.text_field :industry_interest_list, :class => "form_field", :placeholder => "Interest (industry) (seperate with commas)" %>
-        </div>
-        <div>
-          <%= f.text_field :country_list, :class => "form_field", :placeholder => "Country of origin & experience (seperate with commas)" %>
-        </div>
-        <div>
-          <%= f.text_field :undergrad_list, :class => "form_field", :placeholder => "Undergraduate college" %>
+          <%= f.label "Undergraduate College" %><br />
+          <%= f.text_field :undergrad_list, :class => "form_field" %>
         </div>
         <div class="submit_btn">
           <%= f.submit "sign up" %>

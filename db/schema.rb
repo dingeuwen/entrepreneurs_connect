@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130609232442) do
+ActiveRecord::Schema.define(:version => 20130610180229) do
 
   create_table "comments", :force => true do |t|
     t.integer  "content_id"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20130609232442) do
     t.text     "problem_statement"
     t.text     "details"
     t.text     "what_i_need"
-    t.boolean  "private"
+    t.boolean  "enable_private"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

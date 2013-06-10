@@ -26,15 +26,17 @@
       <%= f.text_field :title, :class => "form_field", :placeholder => "Enter title of your startup/product/business idea" %>
       <%= f.label "Summary of the idea (140 character limit)" %><br />
       <%= f.text_area :summary, :class => "desc_field" %>
-      <%= f.label "The vision" %><br />
-      <%= f.text_area :vision, :class => "desc_field", :placeholder => "What the big, hairy, audacious goal?" %>
       <%= f.label "Problem statement" %><br />
       <%= f.text_area :problem_statement, :class => "desc_field", :placeholder => "Whats the problem you are trying to solve? How are you adding value?" %>
+      <%= f.label "The vision" %><br />
+      <%= f.text_area :vision, :class => "desc_field", :placeholder => "What the big, hairy, audacious goal? What does success look like?" %>
       <%= f.label "Other details" %><br />
       <%= f.text_area :details, :class => "desc_field", :placeholder => "Anything else?" %>
       <%= f.label "What I need/am looking for" %><br />
       <%= f.text_area :what_i_need, :class => "desc_field", :placeholder => "How can members of this community help?" %>
-      <p> missing checkbox to indicate private idea </p>
+      <%= f.label "Add tags to your ideas (seperate tags with commas)" %><br />
+      <%= f.text_area :tag_list, :class => "desc_field" %>
+      <%= f.check_box :enable_private %> Make this idea private? If yes, no one else will be able to view this idea except yourself.
 
     </div>
 

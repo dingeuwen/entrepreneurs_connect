@@ -6,16 +6,18 @@
 
   <div class="rule"></div>
 
-  <div class="grid_4 profile_container">
-    <div class="profile_img">
-      <%= image_tag @user.image_url(:thumb).to_s %>
-    </div>
+  <div class="grid_8 profile_container">
+    <img style="display:block; margin-left:auto; margin-right:auto;" src="<%= @user.image_url(:thumb).to_s %>">
     <h3>
       { <span class="username"><%= @user.first_name %> <%= @user.last_name %></span> }
     </h3>
     <p>
-      <p class="form_title">Bio:</p>
+      <p class="form_title">Me in brief:</p>
       <%= @user.bio %>
+      <p class="form_title">Background:</p>
+      <%= @user.background %>
+      <p class="form_title">Employment history:</p>
+      <%= @user.employment_history %>
     </p>
     <p>
       <% unless @user.twitter_link.nil? or @user.twitter_link.blank? %>
@@ -27,14 +29,6 @@
       <% unless @user.dribbble_link.nil? or @user.dribbble_link.blank? %>
         <%= link_to image_tag("dribbble.svg"), "http://www.dribbble.com/#{@user.dribbble_link}", target: "_blank" %>
       <% end %>
-    </p>
-    <p>
-      <p class="form_title">Countries:</p>
-      <%= raw @user.country_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
-    </p>
-    <p>
-      <p class="form_title">Undergrad:</p>
-      <%= raw @user.undergrad_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </p>
     <p>
       <p class="form_title">Role Interest:</p>
@@ -52,8 +46,16 @@
       <p class="form_title">Goals with respect to entrepreneurship while at HBS:</p>
       <%= @user.entrepreneurship_goals %>
     </p>
+    <p>
+      <p class="form_title">Countries:</p>
+      <%= raw @user.country_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    </p>
+    <p>
+      <p class="form_title">Undergrad:</p>
+      <%= raw @user.undergrad_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    </p>
 
-    <% if user_signed_in? && @user.username == current_user.username %>
+    <% if user_signed_in? && @user.id == current_user.id %>
        <%= link_to(edit_user_registration_path) do %>
         <div id="edit_profile_btn">Edit Profile</div>
        <% end %>
@@ -61,7 +63,7 @@
   </div>
 
 
-  <p class="form_title grid_8 right">Startup/Product/Business Ideas:</p>
+  <p class="form_title grid_4 right">Startup/Product/Business Ideas:</p>
   <% @ideas.each do |idea| %>
   <div class="grid_4 user_cards right">
     <div class="card">
