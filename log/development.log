@@ -66895,3 +66895,639 @@ Served asset /pub_profile_bubble.svg - 304 Not Modified (0ms)
 
 Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 18:33:02 -0700
 Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  Rendered pages/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 433ms (Views: 238.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/eye_icon.svg" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /eye_icon.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 19:19:41 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/users/16/update_views" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Processing by UsersController#update_views as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'sferik@mba2015.hbs.edu' AND "users"."id" != 16) LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'countries' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'undergrad' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'role_interest' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'industry_interest' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 22ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'role_interest' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'industry_interest' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'countries' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'undergrad' AND taggings.tagger_id IS NULL)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = 16
+  Rendered users/show.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 253ms (Views: 248.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:43 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pub_profile_bubble.svg" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /pub_profile_bubble.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 19:19:44 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  Rendered pages/index.html.erb within layouts/application (9.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered layouts/_navigation.html.erb (2.7ms)
+Completed 200 OK in 198ms (Views: 195.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/eye_icon.svg" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /eye_icon.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 19:42:32 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/ideas/new" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Processing by IdeasController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Idea' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  Rendered ideas/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 272ms (Views: 250.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/upload_lamp.svg" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /upload_lamp.svg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 19:48:59 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  Rendered pages/index.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 243ms (Views: 240.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:07 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/eye_icon.svg" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /eye_icon.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 20:15:08 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/users/16/update_views" for 127.0.0.1 at 2013-06-10 22:36:31 -0700
+
+SyntaxError (/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/helpers/application_helper.rb:24: syntax error, unexpected '(', expecting keyword_end
+      })();
+         ^
+/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/helpers/application_helper.rb:28: syntax error, unexpected $end, expecting keyword_end):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/users/16/update_views" for 127.0.0.1 at 2013-06-10 22:57:51 -0700
+Processing by UsersController#update_views as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'sferik@mba2015.hbs.edu' AND "users"."id" != 16) LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'countries' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'undergrad' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'role_interest' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'industry_interest' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 93ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2013-06-10 22:57:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'role_interest' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'industry_interest' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'countries' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'undergrad' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = 16[0m
+  Rendered users/show.html.erb within layouts/application (38.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 288ms (Views: 283.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pub_profile_bubble.svg" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /pub_profile_bubble.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 22:57:52 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-10 22:58:02 -0700
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'User' AND (taggings.context = 'skills' AND taggings.tagger_id IS NULL)
+  Rendered pages/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.7ms)
+Completed 200 OK in 248ms (Views: 245.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /devise.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /favorites.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/grid_960.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /grid_960.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /contents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/navigation.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /navigation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contents.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /contents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /favorites.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search_field_magnifying_glass.svg" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /search_field_magnifying_glass.svg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/eye_icon.svg" for 127.0.0.1 at 2013-06-10 22:58:03 -0700
+Served asset /eye_icon.svg - 304 Not Modified (0ms)
