@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610180229) do
+ActiveRecord::Schema.define(:version => 20130611162828) do
 
   create_table "comments", :force => true do |t|
     t.integer  "content_id"
@@ -73,6 +73,13 @@ ActiveRecord::Schema.define(:version => 20130610180229) do
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
+  create_table "rolodex_cards", :force => true do |t|
+    t.integer  "user1_id"
+    t.integer  "user2_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -88,13 +95,6 @@ ActiveRecord::Schema.define(:version => 20130610180229) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
-  end
-
-  create_table "to_watch_lists", :force => true do |t|
-    t.integer  "user1_id"
-    t.integer  "user2_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

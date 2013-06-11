@@ -10,7 +10,7 @@ Cssdash::Application.routes.draw do
   end
   devise_for :users
 
-  root :to => 'pages#index'
+  root :to => 'pages#index', :as => 'university_home_page'
   # Create new idea
   get '/ideas/new', :to => 'ideas#new', :as => 'new_idea'
   post '/ideas', :to => 'ideas#create'
@@ -36,6 +36,9 @@ Cssdash::Application.routes.draw do
   get '/tags/:tag', :to => 'pages#index', :as => :tag
   # Search
   get '/search', :to => 'ideas#search'
+
+  post '/add_to_rolodex', :to => 'rolodex_cards#add_to_rolodex'
+  post '/remove_from_rolodex', :to => 'rolodex_cards#remove_from_rolodex'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
