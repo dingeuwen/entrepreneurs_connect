@@ -8,6 +8,7 @@ gem 'rails_admin'
 gem 'newrelic_rpm'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
