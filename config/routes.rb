@@ -18,18 +18,21 @@ Cssdash::Application.routes.draw do
   get '/ideas/:id/edit',  :to => 'ideas#edit', :as => 'edit_idea'
   # Show idea
   get '/ideas/:id', :to => 'ideas#show', :as => 'idea'
-  # Show HTML idea
-  get '/ideas/:id/html', :to => 'ideas#html'
-  # Show CSS idea
-  get '/ideas/:id/css', :to => 'ideas#css'
-  # Update idea
-  put '/ideas/:id', :to => 'ideas#update'
+  # # Show HTML idea
+  # get '/ideas/:id/html', :to => 'ideas#html'
+  # # Show CSS idea
+  # get '/ideas/:id/css', :to => 'ideas#css'
+  # # Update idea
+  # put '/ideas/:id', :to => 'ideas#update'
+
+  get '/users/:id', :to => 'users#show', :as => 'user_show'
+  # get '/users/:id/update_views', :to => 'users#update_views', :as => 'update_user_views'
+
   # Contributor profile
   get '/ideas/:id/update_views', :to => 'ideas#update_views', :as => 'update_views'
   get '/ideas/:id/update_likes', :to => 'ideas#update_likes', :as => 'update_likes'
-  get '/users/:id/update_views', :to => 'users#update_views', :as => 'update_user_views'
 
-  get '/users/:id', :to => 'users#show', :as => 'user_show'
+
   # About us
   get '/aboutus', :to => 'pages#aboutus'
   # Tags
