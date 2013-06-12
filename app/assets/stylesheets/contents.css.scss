@@ -348,12 +348,11 @@ pre {
 }
 
 .form_title {
-  font-family: $header_font;
-  font-size: 13px;
+  font-family: Georgia;
+  font-size: 18px;
   color: #A51D33;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .form_field {
@@ -374,6 +373,11 @@ pre {
 .bio_field {
   @extend .form_field;
   height: 80px;
+}
+
+.big_text_field {
+  @extend .form_field;
+  height: 180px;
 }
 
 .desc_field {

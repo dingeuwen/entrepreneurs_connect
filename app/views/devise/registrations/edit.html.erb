@@ -11,15 +11,15 @@
       <%= devise_error_messages! %>
       <div class="grid_3">
         <%= image_tag @user.image_url(:thumb).to_s %>
+        <p>
+          Choose image to upload
+          <%= f.file_field :image %>
+        </p>
+        <p>
+          Or use an image online. Put url below.
+          <%= f.text_field :remote_image_url %>
+        </p>
       </div>
-      <p>
-        Choose image to upload
-        <%= f.file_field :image %>
-      </p>
-      <p>
-        Or use an image online. Put url below.
-        <%= f.text_field :remote_image_url %>
-      </p>
       <div class="grid_5" style="margin-left:20px">
         <div>
           <%= f.label :first_name %><br />
@@ -36,44 +36,32 @@
       </div>
       <div class="grid_8">
         <div>
-          <%= f.label :twitter_link, 'Link to Twitter'  %><br />
-          <%= f.text_field :twitter_link, :class => "form_field", :placeholder => "Add link to your Twitter account" %>
-        </div>
-        <div>
-          <%= f.label :github_link, 'Link to Github' %><br />
-          <%= f.text_field :github_link, :class => "form_field", :placeholder => "Add link to your github" %>
-        </div>
-        <div>
-          <%= f.label :dribbble_link, 'Link to Dribbble' %><br />
-          <%= f.text_field :dribbble_link, :class => "form_field", :placeholder => "Add link to your Dribble" %>
-        </div>
-        <div>
           <%= f.label :bio %><br />
           <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field" %>
         </div>
         <div>
           <%= f.label :background %><br />
-          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
           <%= f.label :skills %><br />
-          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
           <%= f.label :employment_history %><br />
-          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
           <%= f.label :entrepreneurship_goals %><br />
-          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
           <%= f.label :role_interest %><br />
-          <%= f.text_area :role_interest_list, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :role_interest_list, :cols => "30", :rows => "10", :class => "bio_field" %>
         </div>
         <div>
           <%= f.label :industry_interest %><br />
-          <%= f.text_area :industry_interest_list, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.text_area :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field" %>
         </div>
         <div>
           <%= f.label :countries %><br />

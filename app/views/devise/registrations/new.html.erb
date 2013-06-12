@@ -1,9 +1,10 @@
 <div class="container_12">
 
-  <div class="grid_4" style="margin-top:40px; position:fixed; margin-right: 100px;">
+  <div class="grid_4" style="margin-top:0px; position:fixed; margin-right: 100px; border-top:3px solid red; border-bottom:3px solid red;">
     <div style="width:250px; margin-left:auto; margin-right:auto; text-align:center; font-weight:900;">
-      <p>This is how your profile will appear on the home page.</p>
-      <p> All your other details will be on your personal profile page.</p>
+      <p>SAMPLE PROFILE <br>
+      (This is how your profile will appear on the home page)
+      </p>
     </div>
     <% user = User.find(1) %>
     <div class="grid_4 card_container">
@@ -13,7 +14,7 @@
 
         </div>
         <div class="user_bio">
-          Flyer, swashbuckler, wearer of bright green tights. I enjoy playing find the hook and catching my shadow. Partial towards fairies and never growing up.
+          Flyer, swashbuckler, wearer of bright green tights. I enjoy playing steal the hook and catching my shadow. Partial towards fairies and never growing up.
         </div>
         <div class="card_description hidden">
           <span class="card_title">
@@ -23,9 +24,7 @@
           <p style="position:relative; top:0px;">{Employment History}</p>
           <p style="position:relative; top:-10px;">Leader of the Lost Boys at age 8 (held position for 30 years till age 12)</p>
           <p style="position:relative; top:-10px;">{Entrepreneurship Goals}</p>
-          <p style="position:relative; top:-20px;">To start a company that teaches people how to find their happy thought.</p>
-
-
+          <p style="position:relative; top:-20px;">To start a company that teaches people how to find and hold on to their happy thought.</p>
         </div>
       </div>
 
@@ -43,6 +42,17 @@
       <%= image_tag ("pub_profile_bubble.svg") %>
     </div>
     <p class="pg_title"> sign up </p>
+
+    <p style="text-align:center">
+      The Startup Network aims to connect you with your future startup cofounder.
+    </p>
+    <p style="text-align:center">
+      It is a social networking site built specifically for HBS students, by an HBS student. It is designed to allow users to share their interests and passions, and to market their skills, experiences, and ideas to other members of the community.
+    </p>
+    <p style="text-align:center">
+      Best of luck!
+    </p>
+
     <div class="rule"></div>
 
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:multipart => true}) do |f| %>
@@ -91,19 +101,19 @@
         </div>
         <div>
           <%= f.label "Background (feel free to add links to portfolios or projects/companies/stuff you have done)" %><br />
-          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
+          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
         </div>
         <div>
           <%= f.label "Skills (seperate each with comma) (required)" %><br />
-          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
           <%= f.label "Employment History" %><br />
-          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Short summary of your building/hacking/working/professional experience" %>
+          <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Short summary of your building/hacking/working/professional experience" %>
         </div>
         <div>
           <%= f.label "Entrepreneurship Goals" %><br />
-          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "What do you hope to achieve with respect to entrepreneurship during your time at HBS?" %>
+          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "What do you hope to achieve with respect to entrepreneurship during your time at HBS?" %>
         </div>
         <div>
           <span>Interest: Role (eg. Marketing, product, design, biz dev, just exploring) (required)</span>
@@ -115,7 +125,7 @@
         </div>
         <div>
           <%= f.label "Country of origin, experience, and/or interest (required)" %><br />
-          <%= f.text_field :country_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
+          <%= f.text_field :country_list, :cols => "30", :rows => "10", :class => "form_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
           <%= f.label "Undergraduate College (required)" %><br />

@@ -1,8 +1,19 @@
-<div class="grid_4 push_4">
+<div class="grid_6 push_3">
   <div class="feature_icon">
     <%= image_tag ("sign_in_door.svg") %>
   </div>
   <p class="pg_title"> sign in </p>
+
+  <p style="text-align:center">
+    The Startup Network aims to connect you with your future startup cofounder.
+  </p>
+  <p style="text-align:center">
+    It is a social networking site built specifically for HBS students, by an HBS student. It is designed to allow users to share their interests and passions, and to market their skills, experiences, and ideas to other members of the community.
+  </p>
+  <p style="text-align:center">
+    Best of luck!
+  </p>
+
   <div class="rule"></div>
 
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -20,7 +31,7 @@
       <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
     <% end -%>
 
-    <div class="grid_4 submit_btn">
+    <div class="grid_6 submit_btn">
       <%= f.submit "Sign in" %>
     </div>
   <% end %>
