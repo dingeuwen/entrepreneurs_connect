@@ -6,7 +6,7 @@
       (This is how your profile will appear on the home page)
       </p>
     </div>
-    <% user = User.find(1) %>
+    <% user = User.new %>
     <div class="grid_4 card_container">
       <div class="card">
         <div class="iframe_wrapper">
@@ -31,7 +31,7 @@
       <div class="card_header">
         <span class="card_contributor">Peter Pan</span>
         <span class="card_icons">
-          <%= image_tag('eye_icon.svg')%> <%= user.views %>
+          <%= image_tag('eye_icon.svg')%> 438
       </div>
     </div>
   </div>
@@ -43,13 +43,13 @@
     </div>
     <p class="pg_title"> sign up </p>
 
-    <p style="text-align:center">
+    <p style="text-align:center; font-size: 16px;">
       The Startup Network aims to connect you with your future startup cofounder.
     </p>
-    <p style="text-align:center">
+    <p style="text-align:center; font-size: 16px;">
       It is a social networking site built specifically for HBS students, by an HBS student. It is designed to allow users to share their interests and passions, and to market their skills, experiences, and ideas to other members of the community.
     </p>
-    <p style="text-align:center">
+    <p style="text-align:center; font-size: 16px;">
       Best of luck!
     </p>
 
@@ -99,10 +99,6 @@
           <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page)" %>
         </div>
         <div>
-          <%= f.label "Background (feel free to add links to portfolios or projects/companies/stuff you have done)" %><br />
-          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
-        </div>
-        <div>
           <%= f.label "Skills (seperate each with comma)" %><br />
           <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
@@ -121,14 +117,6 @@
         <div>
           <span>Interest: Industry (eg. Education, med device, consumer products, web, mobile, etc)</span>
           <%= f.text_field :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
-        </div>
-        <div>
-          <%= f.label "Country of origin, experience, and/or interest" %><br />
-          <%= f.text_field :country_list, :cols => "30", :rows => "10", :class => "form_field", :placeholder => "Seperate with commas if multiple" %>
-        </div>
-        <div>
-          <%= f.label "Undergraduate College" %><br />
-          <%= f.text_field :undergrad_list, :class => "form_field" %>
         </div>
         <div class="submit_btn">
           <%= f.submit "sign up" %>

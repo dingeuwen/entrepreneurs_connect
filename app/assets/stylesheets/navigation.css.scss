@@ -4,6 +4,12 @@ $pink: #f36c61;
 $main_font: 'Source Sans Pro', sans-serif;
 $logo_font: Trocchi, serif;
 
+
+
+#nav_container {
+  display: inline-block;
+}
+
 #nav_background {
   height: 112px;
   width: 100%;
@@ -17,6 +23,9 @@ $logo_font: Trocchi, serif;
   color: white;
   padding-top: 5px;
   float: right;
+  position: relative;
+  top: -50px;
+  right: -50px;
   a, a:visited {color: white;}
   a:hover {text-decoration: underline;}
   li {
@@ -36,7 +45,7 @@ $logo_font: Trocchi, serif;
     padding: 3px 0 5px 28px;
     font-family: $main_font;
     border-radius: 3px;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -48,12 +57,18 @@ $logo_font: Trocchi, serif;
   top: 15px;
 }
 
+#beta_logo {
+  color: red;
+  font-family: $logo_font;
+  margin-left: 5px;
+}
+
 #sub_logo{
   color: white;
   font-family: $logo_font;
   position: relative;
   top: 50px;
-  left: -310px;
+  left: -350px;
 }
 
 #upload_btn {

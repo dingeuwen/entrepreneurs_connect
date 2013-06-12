@@ -4,7 +4,6 @@ Cssdash::Application.routes.draw do
 
   devise_for :users
 
-
   # resources :comments
   # resources :favorites
   resources :ideas do

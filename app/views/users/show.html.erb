@@ -6,13 +6,11 @@
 
   <div class="rule"></div>
 
-  <div class="grid_12">
-    <img style="display:block; margin-left:auto; margin-right:auto;" src="<%= @user.image_url(:profile).to_s %>">
+  <div class="grid_7">
+    <img style="" src="<%= @user.image_url(:profile).to_s %>">
   </div>
 
-
-  <div class="grid_8 profile_container" style="font-family:Georgia">
-
+  <div class="grid_5" style="margin-top: 50px; margin-left:20px;">
     <h3 style="font-family:Trocchi, serif">
       { <span class="username"><%= @user.first_name %> <%= @user.last_name %></span> }
     </h3>
@@ -23,9 +21,12 @@
       <p class="form_title">Background:</p>
       <%= simple_format(@user.background) %>
       <p></p>
-      <p class="form_title">Employment History:</p>
-      <%= simple_format(@user.employment_history) %>
     </p>
+  </div>
+
+
+  <div class="grid_6 profile_container" style="font-family:Georgia">
+
     <p></p>
     <p>
       <% unless @user.twitter_link.nil? or @user.twitter_link.blank? %>
@@ -38,6 +39,8 @@
         <%= link_to image_tag("dribbble.svg"), "http://www.dribbble.com/#{@user.dribbble_link}", target: "_blank" %>
       <% end %>
     </p>
+    <p class="form_title">Employment History:</p>
+    <%= simple_format(@user.employment_history) %>
     <p>
       <p class="form_title">Role Interest:</p>
       <%= simple_format(raw @user.role_interest_list.map { |t| link_to t, tag_path(t) }.join(', ')) %>
@@ -94,38 +97,44 @@
     <% end %>
   </div>
 
-  <div id="content_container" class="grid_4 right profile_container" style="position:relative; top:-20px;">
-    <h3>
-      <span class="grid_4" style="text-align:center;">{ Ideas }</span>
+
+  <div id="content_container" class="grid_6 profile_container" style="position:relative; top:-20px;">
+    <h3 style="margin-bottom: 60px;">
+      <span class="grid_4" style="margin-left: 225px;">{ Ideas }</span>
     </h3>
+    <div style="width:300px; text-align:center; margin-left:120px;">
+      <p>Some of the ideas/products/startups/business ideas I'm thinking of</p>
+      <p>(feature coming soon)</p>
+    </div>
+
     <% if @ideas %>
       <% @ideas.each do |idea| %>
         <div class="grid_4 user_cards right">
-          <div class="card">
-
-            <div class="card_description hidden">
-              <%= link_to idea.title, idea %>
+          <div class="idea_card" style="text-align:center;">
+            <div>
+              <p style="font-weight:bold; margin-top:20px;">{Title}</p>
+              <p><%= idea.title %></p>
+              <p style="font-weight:bold">{Summary}</p>
               <p><%= idea.summary %></p>
+            </div>
+            <div class="card_description hidden">
+              <p style="font-weight:bold; margin-top:20px;">{Problem Statement}</p>
+              <p><%= idea.problem_statement %></p>
+              <p style="font-weight:bold">{Vision}</p>
+              <p><%= idea.vision %></p>
+              <p style="font-weight:bold">{Details}</p>
+              <p><%= idea.details %></p>
+              <p style="font-weight:bold">{What I Need}</p>
+              <p><%= idea.what_i_need %></p>
+              <p style="font-weight:bold">{Tags}</p>
+              <p><%= idea.tag_list %></p>
             </div>
           </div>
 
           <div class="card_header">
-            <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %><%= idea.user.last_name %></a></span>
+            <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %> <%= idea.user.last_name %></a></span>
             <span class="card_icons">
               <%= image_tag('eye_icon.svg')%> <%= idea.views %>
-              <% if current_user %>
-                <% if Favorite.exists?(:idea_id => idea.id, :user_id => current_user.id) %>
-                  <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
-                <% else %>
-                  <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
-                    <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
-                  </a>
-                <% end %>
-              <% else %>
-                <a href="<%= url_for :action => "update_likes", :controller => "ideas", :id => idea.id %>">
-                  <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
-                </a>
-              <% end %>
             </span>
           </div>
         </div>
@@ -136,7 +145,7 @@
 
   <div id="content_container" class="grid_9 profile_container">
     <% if user_signed_in? && @user.id == current_user.id %>
-      <h3 style="margin-left: 240px; margin-bottom:50px;">
+      <h3 id="my_rolodex" style="margin-left: 240px; margin-bottom:50px;">
         { <span class="username">My Rolodex</span> }
       </h3>
       <% RolodexCard.where("user1_id = ?", current_user.id).to_a.each do |rolodexcard| %>

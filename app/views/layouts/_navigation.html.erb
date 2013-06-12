@@ -2,12 +2,14 @@
   <div class="container_12">
     <div id="nav_container">
       <a href="/"><span id="logo">The Startup Network</span>
+      <span id="beta_logo">{beta}</span>
       <span id="sub_logo">Harvard Business School</span></a>
       <div id="nav_links">
         <ul>
           <li><%= link_to("about", aboutus_path) %></li>
         <% if user_signed_in? %>
           <li><%= link_to("sign out", destroy_user_session_path, :method => "delete") %></li>
+          <li><a href="/users/<%= current_user.id %>#my_rolodex">{My Rolodex}</a></li>
           <li><a href="/users/<%= current_user.id %>">{ <%= current_user.first_name %> <%= current_user.last_name %> }</a>
         <% else %>
           <li><%= link_to("sign up", new_user_registration_path) %></li>
@@ -23,10 +25,6 @@
         <% end %>
       </div>
     </div>
-
-
-
-
   </div>
 </div>
 
