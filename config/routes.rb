@@ -3,7 +3,7 @@ Cssdash::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
-  
+
 
   # resources :comments
   # resources :favorites
@@ -38,7 +38,7 @@ Cssdash::Application.routes.draw do
   # About us
   get '/aboutus', :to => 'pages#aboutus'
   # Tags
-  get '/tags/:tag', :to => 'pages#index', :as => :tag
+  get '/tags/:tag', :to => 'users#search_by_tag', :as => :tag
   # Search
   get '/search', :to => 'users#search'
 

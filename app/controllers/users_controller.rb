@@ -21,11 +21,19 @@ class UsersController < ApplicationController
 
     users = User.where("first_name LIKE '%#{q}%' OR last_name LIKE '%#{q}%' OR email LIKE '%#{q}%'")
     tags = User.tagged_with("#{q}")
-    @users = (users+tags).uniq
+    @users = (users+tags).uniq.sort_by {|user| user.views}.reverse
 
     # titles = Idea.where("title LIKE '%#{q}%' OR description LIKE '%#{q}%'")
     # tags = Idea.tagged_with("#{q}")
     # @ideas = (titles+tags).uniq.sort_by {|x| x.favorites}.reverse
+  end
+
+  def search_by_tag
+    q = params[:tag]
+    users = User.tagged_with("#{q}")
+    @users = users.uniq.sort_by {|user| user.views}.reverse
+
+    render "/users/search.html.erb"
   end
 
 end

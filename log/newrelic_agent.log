@@ -555,3 +555,21 @@
 [06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Rails3 Error instrumentation
 [06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Finished instrumentation
+[06/11/13 20:47:34 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: favorites: SELECT "ideas".* FROM "ideas" JOIN taggings ideas_taggings_77e53bc  ON ideas_taggings_77e53bc.taggable_id = ideas.id AND ideas_taggings_77e53bc.taggable_type = 'Idea' AND ideas_taggings_77e53bc.tag_id = 17 ORDER BY favorites
+[06/11/13 20:47:34 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: SQLite3::SQLException: no such column: favorites: SELECT "ideas".* FROM "ideas" JOIN taggings ideas_taggings_77e53bc  ON ideas_taggings_77e53bc.taggable_id = ideas.id AND ideas_taggings_77e53bc.taggable_type = 'Idea' AND ideas_taggings_77e53bc.tag_id = 17 ORDER BY favorites
+[06/11/13 20:56:29 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template /app/views/users/search.html with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.8/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/kaminari-0.14.1/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views"
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect"
+  * "/"
+
+[06/11/13 20:56:29 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template /app/views/users/search.html with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.8/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/kaminari-0.14.1/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views"
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect"
+  * "/"
+

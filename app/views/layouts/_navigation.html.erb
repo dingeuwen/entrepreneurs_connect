@@ -3,35 +3,30 @@
     <div id="nav_container">
       <a href="/"><span id="logo">The Startup Network</span>
       <span id="sub_logo">Harvard Business School</span></a>
-        <div id="nav_links">
-          <ul>
-            <li><%= link_to("about", aboutus_path) %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to("sign out", destroy_user_session_path, :method => "delete") %></li>
-            <li><a href="/users/<%= current_user.id %>">{ <%= current_user.first_name %> <%= current_user.last_name %> }</a>
-          <% else %>
-            <li><%= link_to("sign up", new_user_registration_path) %></li>
-            <li><%= link_to("sign in", new_user_session_path) %></li>
-          <% end %>
-          </ul>
+      <div id="nav_links">
+        <ul>
+          <li><%= link_to("about", aboutus_path) %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to("sign out", destroy_user_session_path, :method => "delete") %></li>
+          <li><a href="/users/<%= current_user.id %>">{ <%= current_user.first_name %> <%= current_user.last_name %> }</a>
+        <% else %>
+          <li><%= link_to("sign up", new_user_registration_path) %></li>
+          <li><%= link_to("sign in", new_user_session_path) %></li>
+        <% end %>
+        </ul>
 
-          <%= form_tag("/search", :method => "get") do %>
-          <input id="search_bar" style="background: white
-                        url(<%=raw image_path('search_field_magnifying_glass.svg')%>)
-                        no-repeat; background-position-x: 8px; background-position-y: 45%;"
-                 type="search" name="query" placeholder="Find a co-founder">
-          <% end %>
-        </div>
+        <%= form_tag("/search", :method => "get") do %>
+        <input id="search_bar" style="background: white
+                      url(<%=raw image_path('search_field_magnifying_glass.svg')%>)
+                      no-repeat; background-position-x: 8px; background-position-y: 45%;"
+               type="search" name="query" placeholder="Find a co-founder">
+        <% end %>
+      </div>
     </div>
 
-    <div id="upload_btn">
-      <% if user_signed_in? %>
-        <%= link_to 'View Startup Ideas', new_idea_path %>
-      <% else %>
-        <%= image_tag('upload_cloud.svg') %>
-        <%= link_to 'Add an Idea', new_user_session_path %>
-      <% end %>
-    </div>
+
+
+
   </div>
 </div>
 
