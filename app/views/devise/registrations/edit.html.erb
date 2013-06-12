@@ -36,39 +36,39 @@
       </div>
       <div class="grid_8">
         <div>
-          <%= f.label :bio %><br />
-          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.label "One-liner bio (160 character limit)" %><br />
+          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page)" %>
         </div>
         <div>
-          <%= f.label :background %><br />
-          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field" %>
+          <%= f.label "Background (feel free to add links to portfolios or projects/companies/stuff you have done)" %><br />
+          <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
         </div>
         <div>
-          <%= f.label :skills %><br />
+          <%= f.label "Skills (seperate each with comma)" %><br />
           <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
-          <%= f.label :employment_history %><br />
+          <%= f.label "Employment History" %><br />
           <%= f.text_area :employment_history, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
-          <%= f.label :entrepreneurship_goals %><br />
-          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "big_text_field" %>
+          <%= f.label "Entrepreneurship Goals" %><br />
+          <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "What do you hope to achieve with respect to entrepreneurship during your time at HBS?" %>
         </div>
         <div>
-          <%= f.label :role_interest %><br />
-          <%= f.text_area :role_interest_list, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.label "Interest: Role (eg. Marketing, product, design, biz dev, just exploring)" %><br />
+          <%= f.text_area :role_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.label :industry_interest %><br />
-          <%= f.text_area :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field" %>
+          <%= f.label "Interest: Industry (eg. Education, med device, consumer products, web, mobile, etc)" %><br />
+          <%= f.text_area :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.label :countries %><br />
-          <%= f.text_area :country_list, :cols => "30", :rows => "10", :class => "form_field" %>
+          <%= f.label "Country of origin, experience, and/or interest" %><br />
+          <%= f.text_area :country_list, :cols => "30", :rows => "10", :class => "form_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.label :undergrad %><br />
+          <%= f.label "Undergraduate College" %><br />
           <%= f.text_area :undergrad_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
 
@@ -94,9 +94,6 @@
         <div class="rule"></div>
       </div>
     <% end %>
-    <div id="delete_btn" class="grid_5 push_3">
-      <%= button_to "delete my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>
-    </div>
   </div>
   <%#= link_to "Back", :back %>
 </div>

@@ -74,7 +74,6 @@
       <div class="grid_5" style="margin-left:20px">
         <p class="form_title">account info</p>
         <div>
-          <!-- NEED TO VALIDATE FOR @mba2015.hbs.edu -->
           <%= f.email_field :email, :class => "form_field", :placeholder => "email (@mba2015.hbs.edu email required)" %>
         </div>
         <div>
@@ -96,15 +95,15 @@
         <p class="form_title">tell us about yourself</p>
         <div>
           <!-- TEXT NEEDS TO APPEAR TO THE SIDE ON MOUSEOVER SO THAT USER CAN REMEMBER WHAT THEY WERE WRITING. EITHER THAT OR JUST PUT LABELS ON THESE TEXT FIELDS -->
-          <%= f.label "One-liner bio (160 character limit) (required)" %><br />
-          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page.)" %>
+          <%= f.label "One-liner bio (160 character limit)" %><br />
+          <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page)" %>
         </div>
         <div>
           <%= f.label "Background (feel free to add links to portfolios or projects/companies/stuff you have done)" %><br />
           <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
         </div>
         <div>
-          <%= f.label "Skills (seperate each with comma) (required)" %><br />
+          <%= f.label "Skills (seperate each with comma)" %><br />
           <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>
         </div>
         <div>
@@ -116,19 +115,19 @@
           <%= f.text_area :entrepreneurship_goals, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "What do you hope to achieve with respect to entrepreneurship during your time at HBS?" %>
         </div>
         <div>
-          <span>Interest: Role (eg. Marketing, product, design, biz dev, just exploring) (required)</span>
+          <span>Interest: Role (eg. Marketing, product, design, biz dev, just exploring)</span>
           <%= f.text_field :role_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <span>Interest: Industry (eg. Education, med device, consumer products, web, mobile, etc) (required)</span>
+          <span>Interest: Industry (eg. Education, med device, consumer products, web, mobile, etc)</span>
           <%= f.text_field :industry_interest_list, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.label "Country of origin, experience, and/or interest (required)" %><br />
+          <%= f.label "Country of origin, experience, and/or interest" %><br />
           <%= f.text_field :country_list, :cols => "30", :rows => "10", :class => "form_field", :placeholder => "Seperate with commas if multiple" %>
         </div>
         <div>
-          <%= f.label "Undergraduate College (required)" %><br />
+          <%= f.label "Undergraduate College" %><br />
           <%= f.text_field :undergrad_list, :class => "form_field" %>
         </div>
         <div class="submit_btn">

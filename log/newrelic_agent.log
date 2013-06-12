@@ -542,3 +542,16 @@
 [06/11/13 19:44:06 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `user' for #<User:0x007fac89ab4400>
 [06/11/13 19:44:42 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"update_likes", :controller=>"users", :id=>1}
 [06/11/13 19:44:42 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:action=>"update_likes", :controller=>"users", :id=>1}
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Starting the New Relic agent in "development" environment.
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Reading configuration from config/newrelic.yml
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Environment: development
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : No known dispatcher detected.
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Application: My Application
+[06/11/13 20:26:41 -0700 Eu-wens-MacBook-Pro.local (49100)] WARN : Agent configured not to send data in this environment.
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing ActiveRecord instrumentation
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Net instrumentation
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Rails 3 Controller instrumentation
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Installing Rails3 Error instrumentation
+[06/11/13 20:26:42 -0700 Eu-wens-MacBook-Pro.local (49100)] INFO : Finished instrumentation
