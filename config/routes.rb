@@ -38,7 +38,7 @@ Cssdash::Application.routes.draw do
   # Tags
   get '/tags/:tag', :to => 'pages#index', :as => :tag
   # Search
-  get '/search', :to => 'ideas#search'
+  get '/search', :to => 'users#search'
 
   post '/add_to_rolodex', :to => 'rolodex_cards#add_to_rolodex'
   post '/remove_from_rolodex', :to => 'rolodex_cards#remove_from_rolodex'

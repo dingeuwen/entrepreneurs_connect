@@ -12,4 +12,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    # @ideas = idea.where("title LIKE '%?%' OR description LIKE '%?%'", params[:query], params[:query])
+    q = params[:query]
+    # q needs to be sql-escaped, otherwise this is good to go
+    # note that the tagged_with method searches for all the following
+    # :skill_list, :country_list, :undergrad_list, :role_interest_list, :industry_interest_list
+
+    users = User.where("first_name LIKE '%#{q}%' OR last_name LIKE '%#{q}%' OR email LIKE '%#{q}%'")
+    tags = User.tagged_with("#{q}")
+    @users = (users+tags).uniq
+
+    # titles = Idea.where("title LIKE '%#{q}%' OR description LIKE '%#{q}%'")
+    # tags = Idea.tagged_with("#{q}")
+    # @ideas = (titles+tags).uniq.sort_by {|x| x.favorites}.reverse
+  end
+
 end

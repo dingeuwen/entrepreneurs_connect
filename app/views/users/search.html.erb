@@ -1,0 +1,44 @@
+<% if (@users == []) || (@user == "") %>
+  <div class="feature_icon">
+    <%= image_tag "search_results_magnifying_glass.svg" %>
+  </div>
+  <p class="pg_title"> no results </p>
+<% else %>
+  <div class="feature_icon">
+    <%= image_tag "search_results_magnifying_glass.svg" %>
+  </div>
+  <p class="pg_title"> search results </p>
+
+  <div id="content_container">
+
+    <% @users.each do |user| %>
+      <div class="grid_4 card_container">
+        <div class="card">
+          <div class="iframe_wrapper">
+            <%= image_tag user.image_url(:thumb).to_s %>
+          </div>
+          <div class="user_bio">
+            <%= user.bio %>
+          </div>
+          <div class="card_description hidden">
+            <a class="card_link" href="<%= url_for :action => "show", :controller => "users", :id => user.id %>"></a>
+            <span class="card_title" style="font-weight:bold">
+              <a href="/users/<%= user.id %>"><%= user.first_name %></a></span>
+            <p style="font-weight:bold">{Skills}</p>
+            <p><%= user.skill_list %></p>
+            <p style="font-weight:bold">{Employment History}</p>
+            <p><%= user.employment_history %></p>
+            <p style="font-weight:bold">{Entrepreneurship Goals}</p>
+            <p><%= user.entrepreneurship_goals %></p>
+          </div>
+        </div>
+
+        <div class="card_header">
+          <span class="card_contributor"><a href="/users/<%= user.id %>"><%= user.first_name %> <%= user.last_name %></a></span>
+          <span class="card_icons">
+            <%= image_tag('eye_icon.svg')%> <%= user.views %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
