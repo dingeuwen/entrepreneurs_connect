@@ -32,7 +32,8 @@ class User < ActiveRecord::Base
 
   has_many :ideas
   has_many :rolodex_cards
-  has_many :favorites
+  has_many :favorites, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
 
 
   has_many :idea_pictures

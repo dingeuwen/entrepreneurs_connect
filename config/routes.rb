@@ -19,6 +19,8 @@ Cssdash::Application.routes.draw do
   get '/ideas/:id/edit',  :to => 'ideas#edit', :as => 'edit_idea'
   # Show idea
   get '/ideas/:id', :to => 'ideas#show', :as => 'idea'
+  # delete idea
+  delete '/ideas/:id', :to => 'ideas#destroy'
   # # Update idea
   # put '/ideas/:id', :to => 'ideas#update'
 

@@ -7,6 +7,7 @@ class Idea < ActiveRecord::Base
   belongs_to :user
   # has_many :content_tags
   has_many :comments, :dependent => :destroy
+  has_many :favorites, :dependent => :destroy
 
   acts_as_taggable_on :tag_list
 

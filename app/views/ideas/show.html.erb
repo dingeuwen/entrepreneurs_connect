@@ -83,9 +83,11 @@
       <% end %>
     <% elsif user_signed_in? %>
       <% if Favorite.exists?(:idea_id => @idea.id, :user_id => current_user.id) %>
+        <div id="edit_profile_btn">Stop Following This Idea
+        </div>
       <% else %>
         <a href="<%= url_for :action => "update_favorites", :controller => "ideas", :id => @idea.id %>">
-          <div id="edit_profile_btn">Follow Idea
+          <div id="edit_profile_btn">Follow This Idea
           </div>
         </a>
       <% end %>
@@ -93,12 +95,17 @@
   </div>
 
 
-<!-- ********************************* COMMENTS SECTION *********************************** -->
+</div>
 
-  <div class="comments_container">
+<div class="grid_12"
+<!-- ********************************* COMMENTS SECTION *********************************** -->
+  <div class="grid_12" style="margin-top: 30px;">
     <div class="rule"></div>
-    <p class="form_title">Comments: </p>
+  </div>
+
+  <div class="grid_5" style="clear:both; margin-top: 27px;">
     <div class="grid_5">
+      <div style="font-family:Georgia;font-size:18px;color:#A51D33;">Comments: </div>
       <% if @idea.comments %>
         <% @idea.comments.each do |comment| %>
           <div class="comments">
@@ -123,7 +130,7 @@
             </div>
           <% end %>
 
-          <div class="field">
+          <div class="field" style="margin-top:30px;">
             <%= g.text_area :comment %>
           </div>
           <%= hidden_field_tag(:idea_id, @idea.id) %>
@@ -131,19 +138,20 @@
             <%= g.submit %>
           </div>
         <% end %>
-<!--
-        i think im creating 2 @comments. one in the def show in ideas, and again in def create in comments.
-        but that doesnt explain why its looking for id=5.
- -->
+
       </div>
     </div>
-
+  </div>
 
 <!-- ******************************** FOLLOWING USERS *************************************** -->
 
-    <div class="grid_5">
-      <p class="form_title">Users following this idea:</p>
-    </div>
+  <div class="grid_5 right">
+    <p class="form_title">Users following this idea:</p>
   </div>
 </div>
+
+
+
+
+
 
