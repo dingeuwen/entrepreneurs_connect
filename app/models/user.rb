@@ -31,13 +31,12 @@ class User < ActiveRecord::Base
   validates :bio, :length => { :maximum => 160 }
 
   has_many :ideas
-  has_many :to_watch_list
+  has_many :rolodex_cards
+  has_many :favorites
+
+
   has_many :idea_pictures
   has_many :idea_invitations
 
-
-
-
-  has_many :favorites
 
 end

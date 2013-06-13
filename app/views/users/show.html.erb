@@ -105,7 +105,6 @@
     </h3>
     <div style="width:300px; text-align:center; margin-left:120px;">
       <p>Some of the ideas/products/startups/business ideas I'm thinking of</p>
-      <p>(feature coming soon)</p>
     </div>
 
     <% if @ideas %>
@@ -136,6 +135,7 @@
           <div class="card_header">
             <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %> <%= idea.user.last_name %></a></span>
             <span class="card_icons">
+              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
               <%= image_tag('eye_icon.svg')%> <%= idea.views %>
             </span>
           </div>
@@ -144,8 +144,10 @@
     <% end %>
   </div>
 
+
+
 <!-- ****************************** ROLODEX SECTION ************************************* -->
-  <div id="content_container" class="grid_8 profile_container" style="border:2px solid red">
+  <div id="content_container" class="grid_8 profile_container">
     <% if user_signed_in? && @user.id == current_user.id %>
       <h3 id="my_rolodex" style="margin-left: 240px; margin-bottom:50px;">
         { <span class="username">My Rolodex</span> }
@@ -183,11 +185,45 @@
   </div>
 
 <!-- ************************ FAVORITED IDEAS SECTION ************************************ -->
-  <div id="content_container" class="grid_4 profile_container" style="border:2px solid red">
+  <div id="content_container" class="grid_4 profile_container">
     <% if user_signed_in? && @user.id == current_user.id %>
       <h3 id="my_rolodex" style="margin-left: 0px; margin-bottom:50px;">
         { <span class="username">Ideas to Watch</span> }
       </h3>
+
+      <% @favorites.each do |idea| %>
+        <div class="grid_4 user_cards right">
+          <div class="idea_card" style="text-align:center;">
+            <div>
+              <p style="font-weight:bold; margin-top:20px;">{The Idea}</p>
+              <p><%= idea.title %></p>
+              <p style="font-weight:bold; margin-top:30px;">{The Pitch}</p>
+              <p><%= idea.summary %></p>
+            </div>
+            <div class="idea_card_description hidden">
+              <a class="card_link" href="<%= url_for :action => "show", :controller => "ideas", :id => idea.id %>"></a>
+              <p style="font-weight:bold; margin-top:20px;">{Problem Statement}</p>
+              <p><%= idea.problem_statement %></p>
+              <p style="font-weight:bold">{Vision}</p>
+              <p><%= idea.vision %></p>
+              <p style="font-weight:bold">{Details}</p>
+              <p><%= idea.details %></p>
+              <p style="font-weight:bold">{What I Need}</p>
+              <p><%= idea.what_i_need %></p>
+              <p style="font-weight:bold">{Tags}</p>
+              <p><%= idea.tag_list %></p>
+            </div>
+          </div>
+
+          <div class="card_header">
+            <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %> <%= idea.user.last_name %></a></span>
+            <span class="card_icons">
+              <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
+              <%= image_tag('eye_icon.svg')%> <%= idea.views %>
+            </span>
+          </div>
+        </div>
+      <% end %>
 
     <% end %>
 

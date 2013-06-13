@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user.views += 1
     @user.save
     @ideas = @user.ideas
+    @favorites = []
+    Favorite.where(:user_id => @user.id).each do |favorite|
+      @favorites << Idea.find(favorite.idea_id)
+    end
 
     respond_to do |format|
       format.html # show.html.erb

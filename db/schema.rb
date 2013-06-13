@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613060113) do
+ActiveRecord::Schema.define(:version => 20130613062002) do
 
   create_table "comments", :force => true do |t|
     t.integer  "idea_id"
@@ -23,12 +23,9 @@ ActiveRecord::Schema.define(:version => 20130613060113) do
 
   create_table "favorites", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "content_id"
-    t.boolean  "deleted"
-    t.boolean  "shared_on_fb"
-    t.boolean  "shared_on_twitter"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.integer  "idea_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "idea_invitations", :force => true do |t|

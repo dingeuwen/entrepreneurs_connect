@@ -113,11 +113,10 @@ class IdeasController < ApplicationController
 
   # PUT /ideas/1
   # PUT /ideas/1.json
-  def update_likes
+  def update_favorites
     @idea = Idea.find(params[:id])
 
     if !Favorite.exists?(:idea_id => @idea.id, :user_id => current_user.id)
-      @idea.favorites += 1
       @favorites = Favorite.new
       @favorites.user_id = current_user.id
       @favorites.idea_id = @idea.id

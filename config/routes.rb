@@ -27,7 +27,7 @@ Cssdash::Application.routes.draw do
 
   # Contributor profile
   get '/ideas/:id/update_views', :to => 'ideas#update_views', :as => 'update_views'
-  get '/ideas/:id/update_likes', :to => 'ideas#update_likes', :as => 'update_likes'
+  get '/ideas/:id/update_favorites', :to => 'ideas#update_favorites', :as => 'update_favorites'
 
 
   # About us
