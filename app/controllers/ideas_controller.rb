@@ -24,6 +24,8 @@ class IdeasController < ApplicationController
     @idea.save
     @user = @idea.user
 
+    @comment = Comment.new
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @idea }

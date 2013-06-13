@@ -5,7 +5,7 @@
   <p class="pg_title"> idea</p>
   <div class="rule"></div>
 
-  <p id="notice"><%= notice %></p>
+
 
   <%= form_for(@idea) do |f| %>
 <!-- ****************************** ERROR CHECKING ************************************** -->
@@ -93,13 +93,7 @@
   </div>
 
 
-
-
-
-
-
-
-
+<!-- ********************************* COMMENTS SECTION *********************************** -->
 
   <div class="comments_container">
     <div class="rule"></div>
@@ -111,23 +105,41 @@
             <a href="/users/<%= @idea.user.id %>">
             <%= comment.user.first_name %></a> on <%= (comment.created_at).strftime("%b %e %Y, %l:%M %p ") %>
             <br>
-            <%= comment.comment %>
+            <%= comment.comment.to_s %>
           </div>
         <% end %>
       <% end %>
 
       <div class="comment_form grid_5">
-        <%= form_for([@idea, @idea.comments.build]) do |f| %>
+        <%= form_for(@comment) do |g| %>
+          <% if @comment.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this idea from being saved:</h2>
+              <ul>
+              <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
           <div class="field">
-            <%= f.text_area :comment %>
+            <%= g.text_area :comment %>
           </div>
           <%= hidden_field_tag(:idea_id, @idea.id) %>
           <div class="actions comment_btn">
-            <%= f.submit %>
+            <%= g.submit %>
           </div>
         <% end %>
+<!--
+        i think im creating 2 @comments. one in the def show in ideas, and again in def create in comments.
+        but that doesnt explain why its looking for id=5.
+ -->
       </div>
     </div>
+
+
+<!-- ******************************** FOLLOWING USERS *************************************** -->
 
     <div class="grid_5">
       <p class="form_title">Users following this idea:</p>

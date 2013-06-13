@@ -4,12 +4,11 @@ Cssdash::Application.routes.draw do
 
   devise_for :users
 
-  # resources :comments
   # resources :favorites
-  resources :ideas do
-    resources :comments
-  end
+
   devise_for :users
+
+  resources :comments
 
   root :to => 'pages#index', :as => 'university_home_page'
   # Create new idea
