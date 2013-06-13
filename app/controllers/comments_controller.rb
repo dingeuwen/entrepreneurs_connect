@@ -43,20 +43,21 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @content = Content.find(params[:content_id])
-    @comment = Comment.new(params[:comment])
+    session[:return_to] ||= request.referer
+    @comment = Comment.new
     @comment.user_id = current_user.id
-    @comment.content_id = params[:content_id]
+    @comment.idea_id = params[:idea_id]
+    @comment.comment = params[:comment]
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @content, notice: 'Comment was successfully created.' }
-        format.json { render json: @content, status: :created, location: @comment }
+        format.html { redirect_to session[:return_to], notice: 'Comment was successfully created.' }
+        format.json { render json: @idea, status: :created, location: @comment }
       else
         # format.html { render action: "new" }
-        format.html { redirect_to(@content, :notice =>
+        format.html { redirect_to(@idea, :notice =>
         'Comment could not be saved. Please fill in all fields')}
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.json { render json: @idea.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -65,12 +66,12 @@ class CommentsController < ApplicationController
   # PUT /comments/1.json
   def update
     @comment = Comment.find(params[:id])
-    @content = @comment.content
+    @idea = @comment.idea
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
         format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
-        format.json { head :no_content }
+        format.json { head :no_idea }
       else
         format.html { render action: "edit" }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -82,12 +83,12 @@ class CommentsController < ApplicationController
   # DELETE /comments/1.json
   def destroy
     @comment = Comment.find(params[:id])
-    @content = Content.find(params[:content_id])
+    @idea = idea.find(params[:idea_id])
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(@content, :notice => 'Comment was successfully deleted.') }
-      format.json { head :no_content }
+      format.html { redirect_to(@idea, :notice => 'Comment was successfully deleted.') }
+      format.json { head :no_idea }
     end
   end
 end

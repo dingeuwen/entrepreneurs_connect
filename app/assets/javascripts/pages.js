@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
 
   $(".idea_card").each(function () {
-    var cardDescription = $(this).children('.card_description');
+    var cardDescription = $(this).children('.idea_card_description');
     var iframeWrapper = $(this).children('.iframe_wrapper');
     $(this).mouseenter(function () {
       cardDescription.removeClass('hidden');

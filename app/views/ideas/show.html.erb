@@ -2,12 +2,13 @@
   <div class="feature_icon">
     <%= image_tag ("detail_binoculars.svg") %>
   </div>
-  <p class="pg_title"> detail </p>
+  <p class="pg_title"> idea</p>
   <div class="rule"></div>
 
   <p id="notice"><%= notice %></p>
 
   <%= form_for(@idea) do |f| %>
+<!-- ****************************** ERROR CHECKING ************************************** -->
     <% if @idea.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -19,71 +20,97 @@
         </ul>
       </div>
     <% end %>
-    <div>
-    <div class="grid_5">
-      <div class="grid_5">
-        <p class="form_title title_rule">Title</p>
-        <%= @idea.title %> by
-        <span class="username">
-          <a href="/users/<%= @idea.user.id %>">
-            <%= @idea.user.username %>
-          </a>
-        </span>
-          on <%= @idea.created_on.strftime("%b %e, %Y") %>
-      </div>
+<!-- ***************************** SHOW IDEA ********************************************** -->
 
-      <div class="grid_5" style="margin-bottom: 15px">
-        <p class="form_title title_rule">Tags</p>
-        <span class="username"><%= raw @idea.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></span>
-      </div>¯
+    <div class="grid_4 card_container">
+      <div class="card">
+        <div class="iframe_wrapper">
+          <%= image_tag @user.image_url(:thumb).to_s %>
+        </div>
+        <div class="user_bio">
+          <%= @user.bio %>
+        </div>
+        <div class="card_description hidden">
+          <a class="card_link" href="<%= url_for :action => "show", :controller => "users", :id => @user.id %>"></a>
+          <span class="card_title" style="font-weight:bold">
+            <a href="/users/<%= @user.id %>"><%= @user.first_name %></a></span>
+          <p style="font-weight:bold">{Skills}</p>
+          <p><%= @user.skill_list %></p>
+          <p style="font-weight:bold">{Employment History}</p>
+          <p><%= @user.employment_history %></p>
+          <p style="font-weight:bold">{Entrepreneurship Goals}</p>
+          <p><%= @user.entrepreneurship_goals %></p>
+        </div>
+      </div>
+      <div class="card_header">
+        <span class="card_contributor"><a href="/users/<%= @user.id %>"><%= @user.first_name %> <%= @user.last_name %></a></span>
+        <span class="card_icons">
+          <%= image_tag('eye_icon.svg')%> <%= @user.views %>
+      </div>
+      <p style="text-align:center; margin-top:30px;">
+        Idea added by <span class="username"><a href="/users/<%= @idea.user.id %>"><%= @idea.user.first_name %></a></span> on <%= @idea.created_on.strftime("%b %e, %Y") %>
+      </p>
     </div>
-    <div class="grid_5" style="margin-left: 20px; height:95px">
-      <p class="form_title title_rule">Description</p>
-        <div class="idea_description"><%= @idea.description %></div>
-      <br>
+
+
+
+    <div class="grid_5 push_1">
+      <p class="form_title title_rule">Title</p>
+      <%= @idea.title %>
+      <p class="form_title title_rule" style="margin-top:30px;">Tags</p>
+      <span class="username"><%= raw @idea.tag_list.map { |t| link_to t, tag_path(t)}.join(", ") %></span>
+      <p class="form_title title_rule" style="margin-top:30px;">Summary</p>
+      <div class="idea_description"><%= @idea.summary %></div>
+      <p class="form_title title_rule" style="margin-top:30px;">Vision</p>
+      <div class="idea_description"><%= @idea.vision %></div>
     </div>
 
     <div class="grid_10" style="margin-top:5px">
-      <div class="grid_5">
-        <p class="form_title">HTML</p>
-        <%= f.text_area :html, :id => "htmloutput", :class => "code_field" %>
-      </div>
-      <div class="grid_5" style="margin-left:20px">
-        <p class="form_title">CSS</p>
-        <%= f.text_area :css, :id => "cssoutput", :class => "code_field" %>
-      </div>
+      <p class="form_title">Problem Statement</p>
+      <%= @idea.problem_statement %>
+      <p class="form_title">Details</p>
+      <%= @idea.details %>
+      <p class="form_title">What I Need To Move Forward</p>
+      <%= @idea.what_i_need %>
     </div>
   <% end %>
 
-  <div id="iframe-wrapper" class="grid_10">
-    <iframe id="iframe" class="big_renderer"></iframe>
+  <div class="grid_10" style="margin-top:40px;">
     <% if user_signed_in? && @idea.user_id == current_user.id %>
-       <div id="edit_profile_btn"><%= link_to 'Edit', edit_idea_path(@idea) %></div>
+       <div id="edit_profile_btn"><%= link_to 'Edit', edit_idea_path(@idea) %>
+       </div>
     <% end %>
   </div>
+
+
 
   <div class="comments_container">
     <div class="rule"></div>
     <p class="form_title">Comments: </p>
     <div class="grid_5">
-    <% @idea.comments.each do |idea| %>
-    <div class="comments">
-      <a href="/users/<%= idea.user.id %>">
-        <%= idea.user.username %>
-      </a> <%= (idea.created_at).strftime("%b %e, %Y") %>
-      <p><%= idea.body %></p>
-    </div>
-    <% end %>
+      <% if @idea.comments %>
+        <% @idea.comments.each do |comment| %>
+          <div class="comments">
+            <a href="/users/<%= @idea.user.id %>">
+            <%= comment.user.first_name %></a> on <%= (comment.created_at).strftime("%b %e %Y, %l:%M %p ") %>
+            <br>
+            <%= comment.comment %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
 
     <div class="comment_form grid_5">
-    <%= form_for([@idea, @idea.comments.build]) do |f| %>
-      <div class="field">
-        <%= f.text_area :body %>
-      </div>
-      <div class="actions comment_btn">
-        <%= f.submit %>
-      </div>
-    <% end %>
+      <%= form_for([@idea, @idea.comments.build]) do |f| %>
+        <div class="field">
+          <%= f.text_area :comment %>
+        </div>
+        <%= hidden_field_tag(:idea_id, @idea.id) %>
+        <div class="actions comment_btn">
+          <%= f.submit %>
+        </div>
+      <% end %>
     </div>
   </div>
+</div>
+
