@@ -115,10 +115,11 @@
             <div>
               <p style="font-weight:bold; margin-top:20px;">{The Idea}</p>
               <p><%= idea.title %></p>
-              <p style="font-weight:bold">{The Pitch}</p>
+              <p style="font-weight:bold; margin-top:30px;">{The Pitch}</p>
               <p><%= idea.summary %></p>
             </div>
             <div class="idea_card_description hidden">
+              <a class="card_link" href="<%= url_for :action => "show", :controller => "ideas", :id => idea.id %>"></a>
               <p style="font-weight:bold; margin-top:20px;">{Problem Statement}</p>
               <p><%= idea.problem_statement %></p>
               <p style="font-weight:bold">{Vision}</p>

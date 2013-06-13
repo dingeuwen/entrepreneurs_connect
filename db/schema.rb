@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612223747) do
+ActiveRecord::Schema.define(:version => 20130613060113) do
 
   create_table "comments", :force => true do |t|
     t.integer  "idea_id"
@@ -48,9 +48,8 @@ ActiveRecord::Schema.define(:version => 20130612223747) do
   create_table "ideas", :force => true do |t|
     t.string   "title"
     t.date     "created_on"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "views"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.integer  "user_id"
     t.string   "summary"
     t.text     "vision"
@@ -58,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20130612223747) do
     t.text     "details"
     t.text     "what_i_need"
     t.boolean  "enable_private"
+    t.integer  "views",             :default => 0
+    t.boolean  "marked_as_deleted", :default => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|

@@ -77,8 +77,19 @@
 
   <div class="grid_10" style="margin-top:40px;">
     <% if user_signed_in? && @idea.user_id == current_user.id %>
-       <div id="edit_profile_btn"><%= link_to 'Edit', edit_idea_path(@idea) %>
-       </div>
+      <%= link_to(edit_idea_path(@idea)) do %>
+        <div id="edit_profile_btn">Edit
+        </div>
+      <% end %>
+    <% elsif user_signed_in? %>
+      <div id="edit_profile_btn">Like
+      </div>
+      <br>
+      <div id="edit_profile_btn">Follow
+      </div>
+      <br>
+      <div id="edit_profile_btn">Send private message
+      </div>
     <% end %>
   </div>
 
@@ -98,18 +109,22 @@
           </div>
         <% end %>
       <% end %>
+
+      <div class="comment_form grid_5">
+        <%= form_for([@idea, @idea.comments.build]) do |f| %>
+          <div class="field">
+            <%= f.text_area :comment %>
+          </div>
+          <%= hidden_field_tag(:idea_id, @idea.id) %>
+          <div class="actions comment_btn">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-    <div class="comment_form grid_5">
-      <%= form_for([@idea, @idea.comments.build]) do |f| %>
-        <div class="field">
-          <%= f.text_area :comment %>
-        </div>
-        <%= hidden_field_tag(:idea_id, @idea.id) %>
-        <div class="actions comment_btn">
-          <%= f.submit %>
-        </div>
-      <% end %>
+    <div class="grid_5">
+      <p class="form_title">Users following this idea:</p>
     </div>
   </div>
 </div>

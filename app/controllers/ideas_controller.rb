@@ -20,6 +20,8 @@ class IdeasController < ApplicationController
   # GET /ideas/1.json
   def show
     @idea = Idea.find(params[:id])
+    @idea.views += 1
+    @idea.save
     @user = @idea.user
 
     respond_to do |format|
@@ -137,10 +139,11 @@ class IdeasController < ApplicationController
   # DELETE /ideas/1.json
   def destroy
     @idea = Idea.find(params[:id])
+    user = @idea.user.id
     @idea.destroy
 
     respond_to do |format|
-      format.html { redirect_to ideas_url }
+      format.html { redirect_to user_show_path(user) }
       format.json { head :no_idea }
     end
   end

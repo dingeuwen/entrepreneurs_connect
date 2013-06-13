@@ -6,10 +6,10 @@
   <div class="rule"></div>
 
   <%= form_for(@idea) do |f| %>
+  <!-- **************************** CHECKING FOR ERRORS ***************************************** -->
     <% if @idea.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
-
         <ul>
         <% @idea.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -18,38 +18,43 @@
       </div>
     <% end %>
 
-    <div class="grid_5">
-      <div class="grid_5">
-        <p class="form_title">Title</p>
-        <%= f.text_field :title, :class => "form_field" %>
-      </div>
-      <div class="field">
-        <p class="form_title">Tags (separated by commas)</p>
-        <%= f.text_field :tag_list, :class => "form_field" %>
-      </div>
-    </div>
-    <div class="grid_5" style="margin-left:20px">
-      <p class="form_title">Description</p>
-      <%= f.text_area :description, :class => "desc_field" %>
+    <!-- **************************** ACTUAL EDIT STUFF ************************************ -->
+
+    <div class="grid_10" style="margin-top: 40px;">
+      <%= f.label "Title" %><br />
+      <%= f.text_field :title, :class => "form_field", :placeholder => "Enter title of your startup/product/business idea" %>
+      <%= f.label "Summary of the idea (160 character limit)" %><br />
+      <%= f.text_area :summary, :class => "desc_field" %>
+      <%= f.label "Problem statement" %><br />
+      <%= f.text_area :problem_statement, :class => "desc_field", :placeholder => "Whats the problem you are trying to solve? How are you adding value?" %>
+      <%= f.label "The vision" %><br />
+      <%= f.text_area :vision, :class => "desc_field", :placeholder => "What the big, hairy, audacious goal? What does success look like?" %>
+      <%= f.label "Other details" %><br />
+      <%= f.text_area :details, :class => "desc_field", :placeholder => "Anything else?" %>
+      <%= f.label "What I need/am looking for" %><br />
+      <%= f.text_area :what_i_need, :class => "desc_field", :placeholder => "How can members of this community help?" %>
+      <%= f.label "Add tags to your ideas (seperate tags with commas)" %><br />
+      <%= f.text_area :tag_list, :class => "desc_field" %>
     </div>
 
-    <div class="grid_10">
-      <div class="grid_5">
-        <p class="form_title">HTML</p>
-        <%= f.text_area :html, :id => "htmloutput", :class => "code_field" %>
+    <%= link_to(@idea, method: :delete, data: { confirm: 'Are you sure?' }) do %>
+      <div class="grid_3 push_3" id="delete_btn">
+        <span style="position:relative; top:5px;">Permanently Delete</span>
       </div>
-      <div class="grid_5" style="margin-left:20px">
-        <p class="form_title">CSS</p>
-        <%= f.text_area :css, :id => "cssoutput", :class => "code_field" %>
-      </div>
-    </div>
-    <div id="iframe-wrapper" class="grid_10">
-      <iframe id="iframe" class="big_renderer"></iframe>
+    <% end %>
+
+    <div class="submit_btn grid_3 push_4 actions">
+      <%= f.submit "save"%>
     </div>
 
-    <div class="submit_btn grid_3 push_7 actions">
-        <%= f.submit "save"%>
-    </div>
+
   <% end %>
+
+
+
+
+  <p></p>
+  <p></p>
+
 </div>
 
