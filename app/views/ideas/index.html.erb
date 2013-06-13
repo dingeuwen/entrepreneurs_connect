@@ -1,0 +1,43 @@
+<h1 style="text-align:center;">All Ideas</h1>
+
+
+<% if @ideas %>
+  <% @ideas.each do |idea| %>
+    <div class="grid_4 user_cards">
+      <div class="idea_card" style="text-align:center;">
+        <div>
+          <p style="font-weight:bold; margin-top:20px;">{The Idea}</p>
+          <p><%= idea.title %></p>
+          <p style="font-weight:bold; margin-top:30px;">{The Pitch}</p>
+          <p><%= idea.summary %></p>
+        </div>
+        <div class="idea_card_description hidden">
+          <a class="card_link" href="<%= url_for :action => "show", :controller => "ideas", :id => idea.id %>"></a>
+          <p style="font-weight:bold; margin-top:20px;">{Problem Statement}</p>
+          <p><%= idea.problem_statement %></p>
+          <p style="font-weight:bold">{Vision}</p>
+          <p><%= idea.vision %></p>
+          <p style="font-weight:bold">{Details}</p>
+          <p><%= idea.details %></p>
+          <p style="font-weight:bold">{What I Need}</p>
+          <p><%= idea.what_i_need %></p>
+          <p style="font-weight:bold">{Tags}</p>
+          <p><%= idea.tag_list %></p>
+        </div>
+      </div>
+
+      <div class="card_header">
+        <span class="card_contributor"><a href="/users/<%= idea.user.id %>"><%= idea.user.first_name %> <%= idea.user.last_name %></a></span>
+        <span class="card_icons">
+          <%= image_tag('heart_icon.svg')%> <%= Favorite.where(:idea_id => idea.id).size %>
+          <%= image_tag('eye_icon.svg')%> <%= idea.views %>
+        </span>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+
+

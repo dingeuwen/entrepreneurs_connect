@@ -23,16 +23,32 @@
                type="search" name="query" placeholder="Find a co-founder">
         <% end %>
       </div>
-      <% if user_signed_in? %>
-        <div id="upload_btn">
-          <%= link_to 'Add an Idea', new_idea_path %>
-        </div>
-      <% end %>
+
     </div>
   </div>
 </div>
 
-
-
+<% if user_signed_in? %>
+  <div id="sub_nav">
+    <%= link_to(new_idea_path) do %>
+      <div class="sub_nav_btn" style="background-color:#E0736F;">
+        Add Idea
+      </div>
+    <% end %>
+    <%= link_to(all_ideas_path) do %>
+      <div class="sub_nav_btn" style="background-color:#94C0CC;">
+        View Ideas
+      </div>
+    <% end %>
+    <div class="sub_nav_btn" style="background-color:#E9C464;">
+      Message Board
+    </div>
+    <%= link_to(edit_user_registration_path) do %>
+      <div class="sub_nav_btn" style="background-color:#7587A3;">
+        Update My Profile
+      </div>
+    <% end %>
+  </div>
+<% end %>
 
 

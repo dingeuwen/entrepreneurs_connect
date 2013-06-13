@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:aboutus]
-
   # GET /contents
   # GET /contents.json
   def index
@@ -12,7 +10,8 @@ class PagesController < ApplicationController
       # @ideas = Idea.order('favorites').limit(24).reverse_order
     end
 
-    @users = User.all.sort_by {|user| user.views}.reverse
+    # @users = User.all.sort_by {|user| user.views}.reverse
+    @users = User.all.shuffle
 
     @founder = User.where(:id => 15)
 

@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
     users = User.where("first_name LIKE '%#{q}%' OR last_name LIKE '%#{q}%' OR email LIKE '%#{q}%'")
     tags = User.tagged_with("#{q}")
-    @users = (users+tags).uniq.sort_by {|user| user.views}.reverse
+    @users = (users+tags).uniq.shuffle
 
     # titles = Idea.where("title LIKE '%#{q}%' OR description LIKE '%#{q}%'")
     # tags = Idea.tagged_with("#{q}")

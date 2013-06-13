@@ -30,13 +30,8 @@ class IdeasController < ApplicationController
     end
   end
 
-  def html
-    @idea = Idea.find(params[:id])
-    render :layout => false
-  end
-
-  def css
-    render :text => Idea.find(params[:id]).css
+  def index
+    @ideas = Idea.all
   end
 
   # GET /ideas/new

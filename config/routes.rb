@@ -14,6 +14,7 @@ Cssdash::Application.routes.draw do
   root :to => 'pages#index', :as => 'university_home_page'
   # Create new idea
   get '/ideas/new', :to => 'ideas#new', :as => 'new_idea'
+  get '/ideas', :to => 'ideas#index', :as => 'all_ideas'
   post '/ideas', :to => 'ideas#create'
   # Edit idea
   get '/ideas/:id/edit',  :to => 'ideas#edit', :as => 'edit_idea'
