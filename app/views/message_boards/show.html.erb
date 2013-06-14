@@ -6,7 +6,7 @@
 
 <div class="grid_12" style="clear:both; margin-top: 27px;">
   <div class="grid_7">
-    <div style="font-family:Georgia;font-size:18px;margin-bottom: 50px;"> <%= @message_board.blurb %> </div>
+    <div style="font-family:Georgia;font-size:18px;margin-bottom: 50px;"> <%=simple_format(@message_board.blurb) %> </div>
 
     <div style="font-family:Georgia;font-size:18px;color:#A51D33;">Comments: </div>
     <% if @message_board.comments %>
