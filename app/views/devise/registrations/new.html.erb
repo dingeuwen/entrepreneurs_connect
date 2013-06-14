@@ -98,6 +98,10 @@
           <%= f.label "One-liner bio (160 character limit)" %><br />
           <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page)" %>
         </div>
+          <%= f.label "My entrepreneurial status" %><br />
+          <%= f.text_area :status, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "eg. looking for a technical cofounder, looking for a team, have a startup, getting over a failed startup etc." %>
+        <div>
+        </div>
         <div>
           <%= f.label "Skills (seperate each with comma)" %><br />
           <%= f.text_area :skill_list, :cols => "30", :rows => "10", :class => "big_text_field" %>

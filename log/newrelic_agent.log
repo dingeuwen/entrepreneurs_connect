@@ -782,3 +782,118 @@
 [06/13/13 14:29:21 -0700 Eu-wens-MacBook-Pro.local (54125)] INFO : Installing Rails3 Error instrumentation
 [06/13/13 14:29:21 -0700 Eu-wens-MacBook-Pro.local (54125)] INFO : Finished instrumentation
 [06/13/13 14:37:23 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: The action 'delete' could not be found for IdeasController
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Environment: development
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : No known dispatcher detected.
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Application: My Application
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] WARN : Agent configured not to send data in this environment.
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Installing Net instrumentation
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 15:11:51 -0700 Eu-wens-MacBook-Pro.local (54236)] INFO : Finished instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Environment: development
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : No known dispatcher detected.
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Application: My Application
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] WARN : Agent configured not to send data in this environment.
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Installing Net instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 15:12:39 -0700 Eu-wens-MacBook-Pro.local (54239)] INFO : Finished instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Environment: development
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : No known dispatcher detected.
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Application: My Application
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] WARN : Agent configured not to send data in this environment.
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Installing Net instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 15:17:31 -0700 Eu-wens-MacBook-Pro.local (54257)] INFO : Finished instrumentation
+[06/13/13 15:58:55 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8cbd8978>
+[06/13/13 15:58:55 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8cbd8978>
+[06/13/13 16:10:16 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8cba77b0>
+[06/13/13 16:10:16 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8cba77b0>
+[06/13/13 16:10:35 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8ed4f638>
+[06/13/13 16:10:35 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8ed4f638>
+[06/13/13 16:12:15 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8eaa3df8>
+[06/13/13 16:12:15 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8cbd1808>:0x007fac8eaa3df8>
+[06/13/13 16:15:48 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template message_boards/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.8/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/kaminari-0.14.1/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views"
+
+[06/13/13 16:15:48 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template message_boards/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/dingeuwen/wdi/wdi-projects/RAILS_PROJECTS/entrepreneurs_connect/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/rails_admin-0.4.8/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/kaminari-0.14.1/app/views"
+  * "/Users/dingeuwen/.rvm/gems/ruby-1.9.3-p392/gems/devise-2.2.4/app/views"
+
+[06/13/13 16:16:09 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8b9c9368>:0x007fac8b86e040>
+[06/13/13 16:16:09 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `message_boards_path' for #<#<Class:0x007fac8b9c9368>:0x007fac8b86e040>
+[06/13/13 16:16:44 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:controller=>"message_boards", :action=>"show", :format=>nil}
+[06/13/13 16:16:44 -0700 Eu-wens-MacBook-Pro.local (47469)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: No route matches {:controller=>"message_boards", :action=>"show", :format=>nil}
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Environment: development
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Dispatcher: webrick
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Application: My Application
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] WARN : Agent configured not to send data in this environment.
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Installing Net instrumentation
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 16:17:19 -0700 Eu-wens-MacBook-Pro.local (54404)] INFO : Finished instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Environment: development
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Dispatcher: webrick
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Application: My Application
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] WARN : Agent configured not to send data in this environment.
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Installing Net instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 16:17:29 -0700 Eu-wens-MacBook-Pro.local (54408)] INFO : Finished instrumentation
+[06/13/13 16:31:18 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 16:31:18 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 16:31:18 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Environment: development
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Dispatcher: webrick
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Application: My Application
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : Agent configured not to send data in this environment.
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Installing Net instrumentation
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 16:31:19 -0700 Eu-wens-MacBook-Pro.local (7584)] INFO : Finished instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Environment: development
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : No known dispatcher detected.
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Application: My Application
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] WARN : Agent configured not to send data in this environment.
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Net instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Finished instrumentation

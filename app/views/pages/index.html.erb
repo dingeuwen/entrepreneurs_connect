@@ -22,6 +22,8 @@
         <a class="card_link" href="<%= url_for :action => "show", :controller => "users", :id => user.id %>"></a>
         <span class="card_title" style="font-weight:bold">
           <a href="/users/<%= user.id %>"><%= user.first_name %></a></span>
+        <p style="font-weight:bold">{Entrepreneurial Status}</p>
+        <p><%= user.status %></p>
         <p style="font-weight:bold">{Skills}</p>
         <p><%= user.skill_list %></p>
         <p style="font-weight:bold">{Stuff I've Done}</p>

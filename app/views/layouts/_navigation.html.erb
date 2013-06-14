@@ -40,9 +40,11 @@
         View Ideas
       </div>
     <% end %>
-    <div class="sub_nav_btn" style="background-color:#E9C464;">
-      Message Board
-    </div>
+    <%= link_to(all_message_boards_path) do %>
+      <div class="sub_nav_btn" style="background-color:#E9C464;">
+        Message Board
+      </div>
+    <% end %>
     <%= link_to(edit_user_registration_path) do %>
       <div class="sub_nav_btn" style="background-color:#7587A3;">
         Update My Profile

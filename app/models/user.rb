@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
                   :undergrad, :role_interest, :industry_interest, :skills,
                   :entrepreneurship_goals, :views, :background, :employment_history,
                   :image, :remote_image_url, :skill_list, :country_list, :undergrad_list,
-                  :role_interest_list, :industry_interest_list
+                  :role_interest_list, :industry_interest_list, :status
   # is attr_protected necessary/useful?
   # attr_protected :admin, :views
 
@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   has_many :rolodex_cards
   has_many :favorites, :dependent => :destroy
   has_many :comments, :dependent => :destroy
+  has_many :message_boards
 
 
   has_many :idea_pictures

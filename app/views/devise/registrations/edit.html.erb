@@ -40,6 +40,10 @@
           <%= f.text_area :bio, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "Tell us about yourself! (briefly. This will be displayed in your tile on the home page)" %>
         </div>
         <div>
+          <%= f.label "My entrepreneurial status" %><br />
+          <%= f.text_area :status, :cols => "30", :rows => "10", :class => "bio_field", :placeholder => "eg. looking for a technical cofounder, looking for a team, have a startup, getting over a failed startup etc." %>
+        </div>
+        <div>
           <%= f.label "Background (feel free to add links to portfolios or projects/companies/stuff you have done)" %><br />
           <%= f.text_area :background, :cols => "30", :rows => "10", :class => "big_text_field", :placeholder => "Now go into more detail! Whatever you feel is relevant!" %>
         </div>
