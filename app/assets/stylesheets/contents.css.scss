@@ -103,6 +103,29 @@ p, ol, ul, td {
   }
 }
 
+.message_board_card {
+  background-color: #F5DFD1;
+  height: 305px;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: 0 1px 1px 1px #d7d7d7;
+  opacity: 0.7;
+  color: black;
+  iframe {
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    height: 260px;
+    border-style: none;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 .card_container {
   overflow: hidden;
   margin: 10px 10px 30px 10px;
@@ -111,6 +134,11 @@ p, ol, ul, td {
 .user_cards {
   overflow: hidden;
   margin: 10px 0px 30px 20px;
+}
+
+.message_board_cards {
+  overflow: hidden;
+  margin: 10px 0px 30px 10px;
 }
 
 .user_bio {

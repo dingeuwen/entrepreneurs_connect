@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:index, :show, :html, :css, :update_views, :search]
+  before_filter :authenticate_user!, :except => [:index, :show, :update_views, :search]
 
   def view_user
   end

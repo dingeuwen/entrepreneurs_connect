@@ -1,31 +1,27 @@
 <h1 style="text-align:center;">Message Board</h1>
 
-<div class="grid_8">
+<div class="grid_12">
   <% if @message_board %>
     <% @message_board.each do |message_board| %>
-      <div class="grid_4 user_cards">
+      <div class="grid_4 message_board_cards">
         <div class="message_board_card" style="text-align:center;">
           <div>
             <a class="card_link" href="<%= url_for :action => "show", :controller => "message_boards", :id => message_board.id %>"></a>
-            <p style="font-weight:bold; margin-top:20px;">{<%= message_board.title %>}</p>
+            <p style="font-weight:bold; margin-top:70px;">{<%= message_board.title %>}</p>
             <p></p>
             <p style="font-weight:bold; margin-top:30px;">{<%= message_board.blurb %>}</p>
             <p></p>
+
           </div>
         </div>
-
-        <div class="card_header">
-
-            <%= message_board.num_of_comments %>
-          </span>
-        </div>
       </div>
+
     <% end %>
   <% end %>
 </div>
 
 <%= link_to(new_message_boards_path) do %>
-  <div class="grid_2 push_8">
+  <div class="grid_2">
     <div id="edit_profile_btn">Add New Discussion
     </div>
   </div>

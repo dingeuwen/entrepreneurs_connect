@@ -1,0 +1,46 @@
+
+
+<div class="grid_12" style="margin-top: 30px;">
+  <div class="rule"></div>
+</div>
+
+<div class="grid_12" style="clear:both; margin-top: 27px;">
+  <div class="grid_7">
+    <div style="font-family:Georgia;font-size:18px;margin-bottom: 50px;"> <%= @message_board.blurb %> </div>
+
+    <div style="font-family:Georgia;font-size:18px;color:#A51D33;">Comments: </div>
+    <% if @message_board.comments %>
+      <% @message_board.comments.each do |comment| %>
+        <div class="comments">
+          <a href="/users/<%= comment.user.id %>">
+          <%= comment.user.first_name %></a> on <%= (comment.created_at).strftime("%b %e %Y, %l:%M %p ") %>
+          <br>
+          <%= comment.comment.to_s %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="comment_form grid_5">
+    <%= form_for(@comment) do |g| %>
+      <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this message_board from being saved:</h2>
+          <ul>
+          <% @comment.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field" style="margin-top:30px;">
+        <%= g.text_area :comment %>
+      </div>
+      <%= hidden_field_tag(:message_board_id, @message_board.id) %>
+      <div class="actions comment_btn">
+        <%= g.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

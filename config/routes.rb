@@ -42,8 +42,13 @@ Cssdash::Application.routes.draw do
   post '/add_to_rolodex', :to => 'rolodex_cards#add_to_rolodex'
   post '/remove_from_rolodex', :to => 'rolodex_cards#remove_from_rolodex'
 
-  get "/message_boards", :to => 'message_boards#index', :as => 'all_message_boards'
-  resource :message_boards
+  get '/message_boards/new', :to => 'message_boards#new', :as => 'new_message_boards'
+  get '/message_boards', :to => 'message_boards#index', :as => 'all_message_boards'
+  post '/message_boards', :to => 'message_boards#create'
+  get "/message_boards/:id", :to => 'message_boards#show'
+
+  # resource :message_boards
+
   # get "/message_board/new", :to => 'message_boards#new', :as => 'new_message_board'
   # post "/message_board", :to => 'message_boards#create'
   # get "/message_board", :to => 'message_boards#index', :as => 'all_message_boards'

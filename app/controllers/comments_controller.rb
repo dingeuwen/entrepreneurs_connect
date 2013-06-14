@@ -46,11 +46,12 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @comment.user_id = current_user.id
     @comment.idea_id = params[:idea_id]
+    @comment.message_board_id = params[:message_board_id]
     @comment.comment = params['comment']['comment']
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment.idea, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @comment.idea || all_message_boards_path, notice: 'Comment was successfully created.' }
         format.json { render json: @idea, status: :created, location: @comment }
       else
         # format.html { render action: "new" }

@@ -897,3 +897,44 @@
 [06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Installing Rails3 Error instrumentation
 [06/13/13 17:02:33 -0700 Eu-wens-MacBook-Pro.local (7664)] INFO : Finished instrumentation
+[06/13/13 19:42:40 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 19:42:40 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 19:42:40 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Environment: development
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : No known dispatcher detected.
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Application: My Application
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] WARN : Agent configured not to send data in this environment.
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Installing Net instrumentation
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 19:42:41 -0700 Eu-wens-MacBook-Pro.local (8189)] INFO : Finished instrumentation
+[06/13/13 19:49:20 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `content_id' for #<Comment:0x007fd84dbb2678>
+[06/13/13 19:51:14 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `content_id' for #<Comment:0x007fd84e24aff8>
+[06/13/13 19:51:14 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `content_id' for #<Comment:0x007fd84e24aff8>
+[06/13/13 19:51:27 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[06/13/13 19:51:27 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+[06/13/13 19:55:43 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:55:43 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:10 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:10 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:12 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:12 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:18 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:57:18 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Starting the New Relic agent in "development" environment.
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Reading configuration from config/newrelic.yml
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Environment: development
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : No known dispatcher detected.
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Application: My Application
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] WARN : Agent configured not to send data in this environment.
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Installing ActiveRecord instrumentation
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Installing Net instrumentation
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Installing Rails 3 Controller instrumentation
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Installing Rails3 Error instrumentation
+[06/13/13 19:58:09 -0700 Eu-wens-MacBook-Pro.local (8269)] INFO : Finished instrumentation
+[06/13/13 20:00:54 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments
+[06/13/13 20:00:54 -0700 Eu-wens-MacBook-Pro.local (7584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: uninitialized constant ActionView::CompiledTemplates::Comments

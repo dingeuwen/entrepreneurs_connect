@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614000234) do
+ActiveRecord::Schema.define(:version => 20130614024242) do
 
   create_table "comments", :force => true do |t|
     t.integer  "idea_id"
     t.integer  "user_id"
     t.text     "comment"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "message_board_id"
   end
 
   create_table "favorites", :force => true do |t|

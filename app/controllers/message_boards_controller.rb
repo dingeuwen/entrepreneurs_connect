@@ -1,4 +1,7 @@
 class MessageBoardsController < ApplicationController
+
+  before_filter :authenticate_user!
+
   def new
     @message_board = MessageBoard.new
   end
@@ -23,5 +26,14 @@ class MessageBoardsController < ApplicationController
   end
 
   def show
+    @message_board = MessageBoard.find(params[:id])
+    @message_board.save
+
+    @comment = Comment.new
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @idea }
+    end
   end
 end
