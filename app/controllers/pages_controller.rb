@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :authenticate_user!, :except => [:aboutus]
+
   # GET /contents
   # GET /contents.json
   def index
