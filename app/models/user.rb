@@ -7,8 +7,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :profile_img_url, :first_name, :last_name, :bio,
-                  :admin, :countries,
+		  :profile_img_url, :first_name, :last_name, :bio, :countries,
                   :undergrad, :role_interest, :industry_interest, :skills,
                   :entrepreneurship_goals, :views, :background, :employment_history,
                   :image, :remote_image_url, :skill_list, :country_list, :undergrad_list,
