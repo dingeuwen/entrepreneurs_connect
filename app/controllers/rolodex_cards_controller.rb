@@ -7,10 +7,10 @@ class RolodexCardsController < ApplicationController
 
     respond_to do |format|
       if @new_rolodex.save
-        format.html { redirect_to university_home_page_path, notice: 'Profile successfully added to your rolodex' }
+        format.html { redirect_to root_path, notice: 'Profile successfully added to your rolodex' }
         format.json { render json: @user, status: :created, location: @idea }
       else
-        format.html { redirect_to university_home_page_path, notice: 'Profile unsuccessfully added to your rolodex' }
+        format.html { redirect_to root_path, notice: 'Profile unsuccessfully added to your rolodex' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -22,10 +22,10 @@ class RolodexCardsController < ApplicationController
 
     respond_to do |format|
       if @rolodex_card.destroy
-        format.html { redirect_to university_home_page_path, notice: 'Profile successfully removed from your rolodex' }
+        format.html { redirect_to root_path, notice: 'Profile successfully removed from your rolodex' }
         format.json { render json: @user, status: :created, location: @idea }
       else
-        format.html { redirect_to university_home_page_path, notice: 'Profile unsuccessfully removed from your rolodex' }
+        format.html { redirect_to root_path, notice: 'Profile unsuccessfully removed from your rolodex' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end

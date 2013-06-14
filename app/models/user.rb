@@ -37,8 +37,8 @@ class User < ActiveRecord::Base
   has_many :message_boards
 
 
-  has_many :idea_pictures
-  has_many :idea_invitations
+  # has_many :idea_pictures
+  # has_many :idea_invitations
 
 
 end

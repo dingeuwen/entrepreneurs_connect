@@ -1,5 +1,13 @@
 Cssdash::Application.routes.draw do
 
+  
+
+  
+
+  
+
+  
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
@@ -10,7 +18,7 @@ Cssdash::Application.routes.draw do
 
   resources :comments
 
-  root :to => 'pages#index', :as => 'university_home_page'
+  root :to => 'pages#index', :as => 'root_path'
   # Create new idea
   get '/ideas/new', :to => 'ideas#new', :as => 'new_idea'
   get '/ideas', :to => 'ideas#index', :as => 'all_ideas'
