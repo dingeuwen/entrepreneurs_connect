@@ -21,8 +21,8 @@ Cssdash::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => "cssdash.com",
+    :port => "587",
+    :domain => "thestartupnetwork.com",
     :user_name => ENV["GMAIL_USERNAME"],
     :password => ENV["GMAIL_PASSWORD"],
     :authentication => "plain",

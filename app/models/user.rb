@@ -3,7 +3,16 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+
+
+         # t.string   :unconfirmed_email # Only if using reconfirmable
+         # ## Lockable
+         # t.integer  :failed_attempts, :default => 0 # Only if lock strategy is :failed_attempts
+         # t.string   :unlock_token # Only if unlock strategy is :email or :both
+         # t.datetime :locked_at
+         # ## Token authenticatable
+         # t.string :authentication_token
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
