@@ -64,4 +64,21 @@ Cssdash::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'thestartupnetwork.co' }
+  # Delivery method
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.smtp_settings = {
+    :address => "oxmail.registrar-servers.com",
+    :port => 25,
+    :domain => "thestartupnetwork.co",
+    :user_name => ENV["OXMAIL_USERNAME"],
+    :password => ENV["OXMAIL_PASSWORD"],
+    :authentication => "plain",
+    :enable_starttls_auto => true,
+  }
 end
