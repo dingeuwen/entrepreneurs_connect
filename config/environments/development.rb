@@ -19,12 +19,13 @@ Cssdash::Application.configure do
   # Delivery method
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+
   config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => "cssdash.com",
-    :user_name => ENV["GMAIL_USERNAME"],
-    :password => ENV["GMAIL_PASSWORD"],
+    :address => "oxmail.registrar-servers.com",
+    :port => 25,
+    :domain => "thestartupnetwork.co",
+    :user_name => ENV["OXMAIL_USERNAME"],
+    :password => ENV["OXMAIL_PASSWORD"],
     :authentication => "plain",
     :enable_starttls_auto => true,
   }
