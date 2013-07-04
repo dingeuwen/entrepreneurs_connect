@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
   validate :image_or_remote_image_url_present
-  validates :email, :format => {:with => /\A([^@\s]+)(@mba2015.hbs.edu|@mba2014.hbs.edu)\z/i, :message => "@mba2015.hbs.edu or @mba2014.hbs.edu e-mail required to sign up. If you are a member of a different year, school, or community and you would like to join, e-mail me at eding@mba2015.hbs.edu indicating your interest. If I get enough requests from other members of your school/group/community, I will create a new site for you."}
+  # validates :email, :format => {:with => /\A([^@\s]+)(@mba2015.hbs.edu|@mba2014.hbs.edu)\z/i, :message => "@mba2015.hbs.edu or @mba2014.hbs.edu e-mail required to sign up. If you are a member of a different year, school, or community and you would like to join, e-mail me at eding@mba2015.hbs.edu indicating your interest. If I get enough requests from other members of your school/group/community, I will create a new site for you."}
 
   def image_or_remote_image_url_present
     errors.add(:image, "can't be blank") unless image.present? || remote_image_url.present?
