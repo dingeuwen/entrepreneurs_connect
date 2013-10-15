@@ -76,10 +76,6 @@
           <%= f.text_area :undergrad_list, :cols => "30", :rows => "10", :class => "form_field" %>
         </div>
 
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-        <% end %>
-
         <div>
           <%= f.label :password %> <i>(Leave blank if you don't want to change it)</i><br />
           <%= f.password_field :password, :autocomplete => "off", :class => "form_field" %>
